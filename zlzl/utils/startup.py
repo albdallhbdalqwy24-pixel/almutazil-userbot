@@ -58,6 +58,7 @@ if Config.HEROKU_APP_NAME is not None and Config.HEROKU_API_KEY is not None:
     heroku_var = app.config()
 else:
     app = None
+    heroku_var = None
 
 if ENV:
     VPS_NOLOAD = ["vps"]
@@ -68,6 +69,8 @@ bot = zedub
 DEV = 1895219306
 
 async def autovars(): #Code by T.me/zzzzl1l
+    if heroku_var is None:
+        return
     if "ENV" in heroku_var and "TZ" in heroku_var:
         return
     if "ENV" in heroku_var and "TZ" not in heroku_var:
@@ -108,7 +111,8 @@ async def autoname(): #Code by T.me/zzzzl1l
         addgvar(zd, zzd)
         addgvar(zt, zzt)
     LOGS.info(f"تم اضافـة اسـم المستخـدم {zzname} .. بنجـاح")
-    heroku_var["ALIVE_NAME"] = zzname
+    if heroku_var is not None:
+        heroku_var["ALIVE_NAME"] = zzname
 
 
 async def setup_bot():
@@ -437,26 +441,9 @@ async def verifyLoggerGroup():
                 + str(e)
             )
     else:
-        try:
-            descript = "لا تقم بحذف هذه المجموعة أو التغيير إلى مجموعة عامه (وظيفتهـا تخزيـن كـل سجـلات وعمليـات البـوت.)"
-            photozed = await zedub.upload_file(file="zedthon/malath/Zpic.jpg")
-            _, groupid = await create_supergroup(
-                "مجمـوعـة السجـل زدثـــون", zedub, Config.TG_BOT_USERNAME, descript, photozed
-            )
-            addgvar("PRIVATE_GROUP_BOT_API_ID", groupid)
-            print(
-                "المجموعه الخاصه لفار الـ PRIVATE_GROUP_BOT_API_ID تم حفظه بنجاح و اضافه الفار اليه."
-            )
-            flag = True
-        except Exception as e:
-            if "can't create channels or chat" in str(e):
-                print("- حسابك محظور من شركة تيليجرام وغير قادر على إنشاء مجموعات السجل والتخزين")
-                print("- قم بالذهاب الى طريقة الحل عبر الرابط (https://t.me/heroku_error/22)")
-                print("- لتطبيق الطريقة والاستمرار في التنصيب")
-            else:
-                print(str(e))
+        LOGS.info("لم يتم إدخال PRIVATE_GROUP_BOT_API_ID؛ لن تُنشأ مجموعة سجل تلقائياً.")
 
-    if PM_LOGGER_GROUP_ID != -100:
+    if PM_LOGGER_GROUP_ID not in (0, -100):
         try:
             entity = await zedub.get_entity(PM_LOGGER_GROUP_ID)
             if not isinstance(entity, types.User) and not entity.creator:
@@ -475,27 +462,7 @@ async def verifyLoggerGroup():
         except Exception as e:
             LOGS.error("حدث خطأ اثناء التعرف على فار PM_LOGGER_GROUP_ID.\n" + str(e))
     else:
-        try:
-            descript = "لا تقم بحذف هذه المجموعة أو التغيير إلى مجموعة عامه (وظيفتهـا تخزيـن رسـائل الخـاص.)"
-            photozed = await zedub.upload_file(file="zedthon/malath/Apic.jpg")
-            _, groupid = await create_supergroup(
-                "مجمـوعـة التخـزين", zedub, Config.TG_BOT_USERNAME, descript, photozed
-            )
-            addgvar("PM_LOGGER_GROUP_ID", groupid)
-            print("تم عمل المجموعة التخزين بنجاح واضافة الفارات اليه.")
-            flag = True
-            if flag:
-                executable = sys.executable.replace(" ", "\\ ")
-                args = [executable, "-m", "zlzl"]
-                os.execle(executable, *args, os.environ)
-                sys.exit(0)
-        except Exception as e:
-            if "can't create channels or chat" in str(e):
-                print("- حسابك محظور من شركة تيليجرام وغير قادر على إنشاء مجموعات السجل والتخزين")
-                print("- قم بالذهاب الى طريقة الحل عبر الرابط (https://t.me/heroku_error/22)")
-                print("- لتطبيق الطريقة والاستمرار في التنصيب")
-            else:
-                print(str(e))
+        LOGS.info("لم يتم إدخال PM_LOGGER_GROUP_ID؛ لن تُنشأ مجموعة تخزين تلقائياً.")
 
 
 async def install_externalrepo(repo, branch, cfolder):

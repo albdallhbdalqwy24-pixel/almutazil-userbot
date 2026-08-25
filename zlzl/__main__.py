@@ -46,19 +46,7 @@ try:
 except Exception as e:
     LOGS.error(f"- {e}")
 
-try:
-    LOGS.info("⌭ جـارِ تفعيـل الاشتـراك ⌭")
-    zedub.loop.create_task(saves())
-    LOGS.info("✓ تـم تفعيـل الاشتـراك .. بنجـاح ✓")
-except Exception as e:
-    LOGS.error(f"- {e}")
-
-try:
-    LOGS.info("⌭ جـارِ تفعيـل الاشتـراك ⌭")
-    zedub.loop.create_task(supscrips())
-    LOGS.info("✓ تـم تفعيـل الاشتـراك .. بنجـاح ✓")
-except Exception as e:
-    LOGS.error(f"- {e}")
+LOGS.info("تم تعطيل الانضمام التلقائي إلى القنوات والمجموعات في إعداد Termux.")
 
 
 async def startup_process():
@@ -66,8 +54,9 @@ async def startup_process():
     await load_plugins("plugins")
     await load_plugins("assistant")
     await verifyLoggerGroup()
-    await add_bot_to_logger_group(BOTLOG_CHATID)
-    if PM_LOGGER_GROUP_ID != -100:
+    if BOTLOG_CHATID != "me":
+        await add_bot_to_logger_group(BOTLOG_CHATID)
+    if PM_LOGGER_GROUP_ID not in (0, -100):
         await add_bot_to_logger_group(PM_LOGGER_GROUP_ID)
     await startupmessage()
     Catcheck.sucess = True
