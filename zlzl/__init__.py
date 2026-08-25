@@ -6,6 +6,9 @@ import heroku3
 from .Config import Config
 from .core.logger import logging
 from .core.session import zedub
+# chatbot imports zedub from this package, so load it only after the session
+# object above has been created to avoid a circular import during startup.
+from .helpers.chatbot import *
 from .helpers.functions.converter import Convert
 from .helpers.functions.musictool import *
 from .helpers.utils.utils import runasync
