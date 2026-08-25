@@ -189,7 +189,15 @@ def install_and_start() -> None:
             )
             requirements = filtered
             log.write("Using Termux-compatible optional dependency filter.\n")
-        command = [sys.executable, "-m", "pip", "install", "-r", str(requirements)]
+        command = [
+            sys.executable,
+            "-m",
+            "pip",
+            "install",
+            "legacy-cgi",
+            "-r",
+            str(requirements),
+        ]
         result = subprocess.run(command, cwd=ROOT, stdout=log, stderr=subprocess.STDOUT)
         if requirements.name == ".requirements-termux.txt":
             requirements.unlink(missing_ok=True)
