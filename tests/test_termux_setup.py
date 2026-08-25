@@ -35,6 +35,7 @@ class TermuxSetupTests(unittest.TestCase):
                 generated = config_path.read_text(encoding="utf-8")
                 self.assertIn("APP_ID = 123456", generated)
                 self.assertIn("API_HASH = 'example-api-hash'", generated)
+                self.assertIn("DB_URI = 'sqlite:///almutazil.db'", generated)
                 self.assertIn("PRIVATE_GROUP_BOT_API_ID = -1004451374841", generated)
                 self.assertIn("PM_LOGGER_GROUP_ID = -1004449370115", generated)
                 self.assertNotIn("-100100", generated)

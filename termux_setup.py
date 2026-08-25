@@ -107,7 +107,7 @@ button {{ width:100%; margin-top:22px; border:0; border-radius:11px; padding:14p
 <input name="PM_LOGGER_GROUP_ID" inputmode="numeric" value="0">
 <label>أيدي المالك<small>ضع 0 ليستخدم السورس أيدي الحساب بعد تسجيل الدخول.</small></label>
 <input name="OWNER_ID" inputmode="numeric" value="0">
-<label>رابط قاعدة البيانات<small>اتركه فارغاً لاستخدام SQLite المحلي. لا تضع رابطاً عشوائياً.</small></label>
+<label>رابط قاعدة البيانات<small>اتركه فارغاً ليستخدم SQLite المحلي تلقائياً. لا تضع رابطاً عشوائياً.</small></label>
 <input name="DATABASE_URL" autocomplete="off" placeholder="اختياري">
 <label>اسم الحساب الظاهر</label>
 <input name="ALIVE_NAME" value="بوقاصد اليافعي">
@@ -143,7 +143,7 @@ def write_config(values: dict[str, str]) -> None:
         raw = (values.get(name) or default).strip()
         return str(int(raw or default))
 
-    database_url = values.get("DATABASE_URL", "").strip() or None
+    database_url = values.get("DATABASE_URL", "").strip() or "sqlite:///almutazil.db"
     content = f'''from sample_config import Config\n\n\nclass Development(Config):\n    APP_ID = {integer("APP_ID")}\n    API_HASH = {values.get("API_HASH", "").strip()!r}\n    ALIVE_NAME = {values.get("ALIVE_NAME", "بوقاصد اليافعي").strip()!r}\n    DB_URI = {database_url!r}\n    STRING_SESSION = {values.get("STRING_SESSION", "").strip()!r}\n    TG_BOT_TOKEN = {values.get("TG_BOT_TOKEN", "").strip()!r}\n    PRIVATE_GROUP_BOT_API_ID = {integer("PRIVATE_GROUP_BOT_API_ID")}\n    OWNER_ID = {integer("OWNER_ID")}\n    COMMAND_HAND_LER = "."\n    SUDO_COMMAND_HAND_LER = "."\n    TZ = {values.get("TZ", "Asia/Riyadh").strip()!r}\n'''
     content = content.replace(
         f"    PRIVATE_GROUP_BOT_API_ID = {integer('PRIVATE_GROUP_BOT_API_ID')}\n",
