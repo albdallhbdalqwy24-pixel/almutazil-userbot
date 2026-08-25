@@ -20,6 +20,12 @@ class TermuxCompatibilityTests(unittest.TestCase):
     def test_unrelated_module_name_is_unchanged(self) -> None:
         self.assertEqual(extdl.resolve_pip_package("requests"), "requests")
 
+    def test_setup_installs_lxml_clean_split_package(self) -> None:
+        setup_source = (Path(__file__).resolve().parents[1] / "termux_setup.py").read_text(
+            encoding="utf-8"
+        )
+        self.assertIn('"lxml_html_clean"', setup_source)
+
 
 if __name__ == "__main__":
     unittest.main()

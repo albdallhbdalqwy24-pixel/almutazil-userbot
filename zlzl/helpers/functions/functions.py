@@ -18,7 +18,13 @@ except ModuleNotFoundError:
     install_pip("IMDbPY")
     from imdb import IMDb
 
-from html_telegraph_poster import TelegraphPoster
+try:
+    # The v2 package supports modern Python releases and exposes the same
+    # TelegraphPoster interface used below.
+    from html_telegraph_poster_v2 import TelegraphPoster
+except ModuleNotFoundError:
+    install_pip("html-telegraph-poster-v2")
+    from html_telegraph_poster_v2 import TelegraphPoster
 from PIL import Image, ImageColor, ImageDraw, ImageFont, ImageOps
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 from telethon.tl.functions.contacts import UnblockRequest as unblock

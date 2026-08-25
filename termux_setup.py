@@ -195,6 +195,8 @@ def install_and_start() -> None:
             "pip",
             "install",
             "legacy-cgi",
+            "html-telegraph-poster-v2",
+            "lxml_html_clean",
             "-r",
             str(requirements),
         ]

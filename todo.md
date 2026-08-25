@@ -8,3 +8,5 @@
 - [x] إصلاح قيمة DB_URI الفارغة في معالج إعداد Termux وتشغيل SQLite محلياً.
 - [x] إصلاح الاستيراد الدائري بين الحزمة وجلسة Telegram في Termux.
 - [x] إصلاح حلقة تثبيت cgi على Python 3.14 في Termux.
+- [x] إصلاح تعطل html_telegraph_poster أثناء إقلاع Termux على Python 3.14.
+- [x] إضافة lxml_html_clean إلى تثبيت Termux لمنع خطأ lxml.html.clean.
