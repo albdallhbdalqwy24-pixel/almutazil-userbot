@@ -105,6 +105,8 @@ button {{ width:100%; margin-top:22px; border:0; border-radius:11px; padding:14p
 <input name="PRIVATE_GROUP_BOT_API_ID" inputmode="numeric" value="0">
 <label>معرّف مجموعة التخزين<small>ضع المعرف كاملاً بالشكل -100…، أو 0 إذا لا تملك مجموعة مخصصة.</small></label>
 <input name="PM_LOGGER_GROUP_ID" inputmode="numeric" value="0">
+<label><input name="AUTO_CREATE_LOG_GROUPS" type="checkbox" value="1" style="width:auto; margin-left:8px;"> إنشاء مجموعتي السجل والتخزين تلقائياً</label>
+<div class="warn">فعّل هذا الخيار فقط إذا تركت معرّفي المجموعتين على 0. سيُنشئ السورس مجموعتين خاصتين مرة واحدة ويضيف بوت الخدمة الموجود في التوكن إليهما. لا يمكن للسورس إنشاء بوت BotFather جديد من دون أن تنشئه أنت أولاً.</div>
 <label>أيدي المالك<small>ضع 0 ليستخدم السورس أيدي الحساب بعد تسجيل الدخول.</small></label>
 <input name="OWNER_ID" inputmode="numeric" value="0">
 <label>رابط قاعدة البيانات<small>اتركه فارغاً ليستخدم SQLite المحلي تلقائياً. لا تضع رابطاً عشوائياً.</small></label>
@@ -144,11 +146,13 @@ def write_config(values: dict[str, str]) -> None:
         return str(int(raw or default))
 
     database_url = values.get("DATABASE_URL", "").strip() or "sqlite:///almutazil.db"
+    auto_create_groups = values.get("AUTO_CREATE_LOG_GROUPS") == "1"
     content = f'''from sample_config import Config\n\n\nclass Development(Config):\n    APP_ID = {integer("APP_ID")}\n    API_HASH = {values.get("API_HASH", "").strip()!r}\n    ALIVE_NAME = {values.get("ALIVE_NAME", "بوقاصد اليافعي").strip()!r}\n    DB_URI = {database_url!r}\n    STRING_SESSION = {values.get("STRING_SESSION", "").strip()!r}\n    TG_BOT_TOKEN = {values.get("TG_BOT_TOKEN", "").strip()!r}\n    PRIVATE_GROUP_BOT_API_ID = {integer("PRIVATE_GROUP_BOT_API_ID")}\n    OWNER_ID = {integer("OWNER_ID")}\n    COMMAND_HAND_LER = "."\n    SUDO_COMMAND_HAND_LER = "."\n    TZ = {values.get("TZ", "Asia/Riyadh").strip()!r}\n'''
     content = content.replace(
         f"    PRIVATE_GROUP_BOT_API_ID = {integer('PRIVATE_GROUP_BOT_API_ID')}\n",
         f"    PRIVATE_GROUP_BOT_API_ID = {integer('PRIVATE_GROUP_BOT_API_ID')}\n"
         f"    PM_LOGGER_GROUP_ID = {integer('PM_LOGGER_GROUP_ID')}\n"
+        f"    AUTO_CREATE_LOG_GROUPS = {auto_create_groups}\n"
         "    HEROKU_API_KEY = None\n"
         "    HEROKU_APP_NAME = None\n",
     )

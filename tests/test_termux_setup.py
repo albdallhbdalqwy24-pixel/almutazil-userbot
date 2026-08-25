@@ -36,6 +36,7 @@ class TermuxSetupTests(unittest.TestCase):
                 self.assertIn("APP_ID = 123456", generated)
                 self.assertIn("API_HASH = 'example-api-hash'", generated)
                 self.assertIn("DB_URI = 'sqlite:///almutazil.db'", generated)
+                self.assertIn("AUTO_CREATE_LOG_GROUPS = False", generated)
                 self.assertIn("PRIVATE_GROUP_BOT_API_ID = -1004451374841", generated)
                 self.assertIn("PM_LOGGER_GROUP_ID = -1004449370115", generated)
                 self.assertNotIn("-100100", generated)
@@ -48,6 +49,28 @@ class TermuxSetupTests(unittest.TestCase):
             termux_setup.normalize_phone("＋٩٦٦ ٥٠-١٢٣-٤٥٦٧"),
             "+966501234567",
         )
+
+    def test_write_config_persists_explicit_group_creation_request(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary_directory:
+            config_path = Path(temporary_directory) / "config.py"
+            original_path = termux_setup.CONFIG_PATH
+            termux_setup.CONFIG_PATH = config_path
+            try:
+                termux_setup.write_config(
+                    {
+                        "APP_ID": "123456",
+                        "API_HASH": "example-api-hash",
+                        "STRING_SESSION": "example-string-session",
+                        "TG_BOT_TOKEN": "example-bot-token",
+                        "AUTO_CREATE_LOG_GROUPS": "1",
+                    }
+                )
+                self.assertIn(
+                    "AUTO_CREATE_LOG_GROUPS = True",
+                    config_path.read_text(encoding="utf-8"),
+                )
+            finally:
+                termux_setup.CONFIG_PATH = original_path
 
     def test_main_page_mentions_local_session_creation(self) -> None:
         page = termux_setup.page().decode("utf-8")

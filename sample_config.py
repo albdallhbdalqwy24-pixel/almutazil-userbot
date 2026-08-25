@@ -65,6 +65,11 @@ class Config(object):
         or os.environ.get("PM_LOGGR_BOT_API_ID")
         or 0
     )
+    # Local Termux setup may create the logger and storage groups once when
+    # both IDs are left empty. Disabled unless explicitly selected.
+    AUTO_CREATE_LOG_GROUPS = bool(
+        os.environ.get("AUTO_CREATE_LOG_GROUPS", "").lower() in {"1", "true", "yes"}
+    )
 
     #فارات زدثــون
     CUSTOM_ALIVE_TEXT = os.environ.get("CUSTOM_ALIVE_TEXT", None)
