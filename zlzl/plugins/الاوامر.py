@@ -46,6 +46,29 @@ LOGS = logging.getLogger(os.path.basename(__name__))
 LOGS1 = logging.getLogger(__name__)
 ZORDR = gvarstatus("Z_ORDR") or "الاوامر"
 ZLORDR = gvarstatus("Z_LORDR") or "الاوامر"
+
+
+@zedub.zed_cmd(pattern="مساعدة(?: |$)(.*)")
+async def basic_help(event):
+    """يعرض تأكيداً أن معالجات الأوامر الأساسية محملة."""
+    await edit_or_reply(
+        event,
+        "**تم تحميل الأوامر الأساسية بنجاح.**\n\n"
+        "جرّب `.اوامري` لعرض القوائم المتاحة، أو `.فحص` للتحقق من حالة السورس.",
+    )
+
+
+@zedub.zed_cmd(pattern="اوامري(?: |$)(.*)")
+async def command_index(event):
+    """يعرض فهرساً مختصراً للأوامر الآمنة المتاحة."""
+    await edit_or_reply(
+        event,
+        "**فهرس الأوامر الأساسية**\n\n"
+        "`.مساعدة` — التحقق من تحميل الأوامر\n"
+        "`.فحص` — معلومات الحالة\n"
+        "`.ايدي` — معلومات المعرّف\n"
+        "`.الاعدادات` — إعدادات الدردشة عند توفر الصلاحية",
+    )
 ppath = os.path.join(os.getcwd(), "temp", "githubuser.jpg")
 GIT_TEMP_DIR = "./temp/"
 cmdhd = Config.COMMAND_HAND_LER
