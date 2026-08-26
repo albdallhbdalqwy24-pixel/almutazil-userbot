@@ -26,3 +26,4 @@
 - [x] إصلاح استيراد sqlalchemy.json غير المتوافق في طبقة قاعدة البيانات على Render.
 - [x] إصلاح حزمة youtube-search-python الناقصة في إقلاع Render.
 - [x] إصلاح تضارب استيراد _zedutils داخل helpers على Render.
+- [x] إضافة fonttools وإصلاح عداد التثبيت المتضارب داخل helpers على Render.

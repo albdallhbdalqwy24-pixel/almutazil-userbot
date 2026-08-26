@@ -3,7 +3,7 @@ from .aiohttp_helper import AioHttp
 from .utils import *
 
 flag = True
-check = 0
+_install_attempts = 0
 while flag:
     try:
         from .functions import *
@@ -16,6 +16,6 @@ while flag:
         break
     except ModuleNotFoundError as e:
         install_pip(e.name)
-        check += 1
-        if check > 5:
+        _install_attempts += 1
+        if _install_attempts > 5:
             break

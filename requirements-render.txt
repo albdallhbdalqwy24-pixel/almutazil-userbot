@@ -9,6 +9,7 @@ validators
 requests
 aiohttp
 Pillow
+fonttools
 lxml
 lxml_html_clean
 legacy-cgi
