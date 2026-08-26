@@ -28,6 +28,8 @@ async def monito_p_m_s(event):  # sourcery no-metrics
     if gvarstatus("PMLOG") and gvarstatus("PMLOG") == "false":
         return
     sender = await event.get_sender()
+    if sender is None or sender.bot:
+        return
     if not sender.bot:
         chat = await event.get_chat()
         fullname = f"{sender.first_name}{sender.last_name}" if sender.last_name else sender.first_name #Write Code By T.me/ZThon
