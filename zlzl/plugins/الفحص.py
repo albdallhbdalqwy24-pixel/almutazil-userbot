@@ -38,10 +38,12 @@ async def zed_alive(event):
     _, check_sgnirts = check_data_base_heal_th()
     if gvarstatus("z_date") is not None:
         zzd = gvarstatus("z_date")
-        zzt = gvarstatus("z_time")
+        zzt = gvarstatus("z_time") or ""
         zedda = f"{zzd}┊{zzt}"
     else:
-        zedda = f"{bt.year}/{bt.month}/{bt.day}"
+        zzd = f"{bt.year}/{bt.month}/{bt.day}"
+        zzt = ""
+        zedda = zzd
     Z_EMOJI = gvarstatus("ALIVE_EMOJI") or "✥┊"
     ALIVE_TEXT = gvarstatus("ALIVE_TEXT") or "** بـوت  زدثــون 𝗭𝗧𝗵𝗼𝗻  يعمـل .. بنجـاح ☑️ 𓆩 **"
     ZED_IMG = gvarstatus("ALIVE_PIC")
@@ -54,7 +56,7 @@ async def zed_alive(event):
         Z_EMOJI=Z_EMOJI,
         mention=mention,
         uptime=uptime,
-        zedda=zzd,
+        zedda=zedda,
         zzd=zzd,
         zzt=zzt,
         telever=version.__version__,

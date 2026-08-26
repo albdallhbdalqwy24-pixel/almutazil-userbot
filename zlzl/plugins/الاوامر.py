@@ -48,7 +48,7 @@ ZORDR = gvarstatus("Z_ORDR") or "الاوامر"
 ZLORDR = gvarstatus("Z_LORDR") or "الاوامر"
 
 
-@zedub.zed_cmd(pattern="مساعدة(?: |$)(.*)")
+@zedub.zed_cmd(pattern="(?:مساعدة|مساعده)(?: |$)(.*)")
 async def basic_help(event):
     """يعرض تأكيداً أن معالجات الأوامر الأساسية محملة."""
     await edit_or_reply(
@@ -58,7 +58,7 @@ async def basic_help(event):
     )
 
 
-@zedub.zed_cmd(pattern="اوامري(?: |$)(.*)")
+@zedub.zed_cmd(pattern="(?:اوامري|الاوامر|الأوامر)(?: |$)(.*)")
 async def command_index(event):
     """يعرض فهرساً مختصراً للأوامر الآمنة المتاحة."""
     await edit_or_reply(
