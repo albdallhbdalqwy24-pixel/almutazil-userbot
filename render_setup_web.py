@@ -74,6 +74,7 @@ def build_environment(values: dict[str, str]) -> dict[str, str]:
             "PRIVATE_GROUP_BOT_API_ID": safe_integer(values.get("PRIVATE_GROUP_BOT_API_ID", "0"), "معرف السجل"),
             "PM_LOGGER_GROUP_ID": safe_integer(values.get("PM_LOGGER_GROUP_ID", "0"), "معرف التخزين"),
             "DATABASE_URL": "sqlite:///render_runtime.db",
+            "ENV": "1",
             "AUTO_CREATE_LOG_GROUPS": "false",
             "ZELZAL_A": "0",
             "PYTHONUNBUFFERED": "1",

@@ -34,6 +34,7 @@ class RenderSetupTests(unittest.TestCase):
         self.assertEqual(environment["ZELZAL_A"], "0")
         self.assertEqual(environment["AUTO_CREATE_LOG_GROUPS"], "false")
         self.assertEqual(environment["DATABASE_URL"], "sqlite:///render_runtime.db")
+        self.assertEqual(environment["ENV"], "1")
         self.assertEqual(environment["PYTHONUNBUFFERED"], "1")
 
     def test_page_contains_no_telegram_secret_default_values(self) -> None:

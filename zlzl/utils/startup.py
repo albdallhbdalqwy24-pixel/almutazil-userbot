@@ -45,6 +45,7 @@ from .tools import create_supergroup
 ENV = bool(os.environ.get("ENV", False))
 LOGS = logging.getLogger("zlzl")
 cmdhr = Config.COMMAND_HAND_LER
+VPS_NOLOAD = []
 Zel_Dev = (1895219306, 925972505)
 Zed_Dev = (1895219306, 925972505, 5176749470, 2095357462, 6269975462, 6227985448, 6470835326, 5616315677)
 Zed_Vip = Zed_Dev

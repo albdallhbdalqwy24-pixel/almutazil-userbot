@@ -31,3 +31,4 @@
 - [x] إصلاح تصدير _zedtools أثناء تهيئة helpers على Render.
 - [x] إضافة اعتماد lyricsgenius الناقص لإضافة الموسيقى على Render.
 - [x] إضافة اعتماد pytz الناقص لمسار startup على Render.
+- [x] إصلاح تعريف VPS_NOLOAD لمنع تجاوز إضافات Render.
