@@ -1,5 +1,9 @@
 from .extdl import *
 from .paste import *
+# memeifyhelpers can be imported while this package is still loading through
+# format -> functions.  Make the command helper available before optional
+# helpers below to avoid a circular-import failure.
+from . import utils as _zedutils
 
 flag = True
 check = 0
