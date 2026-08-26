@@ -11,7 +11,6 @@ while flag:
         from .progress import *
         from .qhelper import process
         from .tools import *
-        from .utils import _zedtools, _zedutils, _format
 
         break
     except ModuleNotFoundError as e:

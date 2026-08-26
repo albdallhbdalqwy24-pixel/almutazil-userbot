@@ -15,6 +15,14 @@ class HelperInstallAttemptsTests(unittest.TestCase):
             self.assertIn("_install_attempts += 1", source)
             self.assertNotIn("\ncheck = 0", source)
 
+    def test_helpers_bootstrap_does_not_import_private_utils_symbols(self) -> None:
+        source = (Path(__file__).resolve().parents[1] / "zlzl/helpers/__init__.py").read_text(
+            encoding="utf-8"
+        )
+        self.assertNotIn("from .utils import _zedtools", source)
+        self.assertNotIn("from .utils import _zedutils", source)
+        self.assertNotIn("from .utils import _format", source)
+
 
 if __name__ == "__main__":
     unittest.main()
