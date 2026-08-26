@@ -2,6 +2,7 @@ Flask>=3.0
 Telethon
 heroku3
 yt-dlp
+youtube-search-python
 SQLAlchemy
 sqlalchemy-json
 validators

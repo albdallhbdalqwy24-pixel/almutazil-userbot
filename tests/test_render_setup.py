@@ -46,6 +46,7 @@ class RenderSetupTests(unittest.TestCase):
         requirements = (Path(__file__).resolve().parents[1] / "requirements-render.txt").read_text()
         self.assertIn("heroku3", requirements)
         self.assertIn("sqlalchemy-json", requirements)
+        self.assertIn("youtube-search-python", requirements)
 
 
 if __name__ == "__main__":
