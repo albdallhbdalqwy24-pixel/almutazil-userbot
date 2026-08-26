@@ -34,6 +34,13 @@ class RenderSetupTests(unittest.TestCase):
         self.assertEqual(environment["ZELZAL_A"], "0")
         self.assertEqual(environment["AUTO_CREATE_LOG_GROUPS"], "false")
         self.assertEqual(environment["DATABASE_URL"], "sqlite:///render_runtime.db")
+        self.assertEqual(environment["PYTHONUNBUFFERED"], "1")
+
+    def test_page_contains_no_telegram_secret_default_values(self) -> None:
+        response = app.test_client().get("/")
+        self.assertEqual(response.status_code, 200)
+        self.assertNotIn(b"hash-value", response.data)
+        self.assertNotIn(b"session-value", response.data)
 
 
 if __name__ == "__main__":

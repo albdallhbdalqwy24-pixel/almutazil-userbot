@@ -11,6 +11,7 @@ import os
 import subprocess
 import sys
 import threading
+import time
 from pathlib import Path
 
 from flask import Flask, Response, request
@@ -19,7 +20,7 @@ from flask import Flask, Response, request
 ROOT = Path(__file__).resolve().parent
 app = Flask(__name__)
 process_lock = threading.Lock()
-userbot_process: subprocess.Popen[bytes] | None = None
+userbot_process: subprocess.Popen[str] | None = None
 
 
 PAGE = """<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8">
@@ -75,12 +76,23 @@ def build_environment(values: dict[str, str]) -> dict[str, str]:
             "DATABASE_URL": "sqlite:///render_runtime.db",
             "AUTO_CREATE_LOG_GROUPS": "false",
             "ZELZAL_A": "0",
+            "PYTHONUNBUFFERED": "1",
         }
     )
     for key in ("API_HASH", "STRING_SESSION", "TG_BOT_TOKEN"):
         if not environment[key]:
             raise ValueError(f"{key} مطلوب.")
     return environment
+
+
+def stream_userbot_output(process: subprocess.Popen[str]) -> None:
+    """Forward every child-process line to Render's primary log stream."""
+    if process.stdout is None:
+        return
+    for line in process.stdout:
+        print(f"[USERBOT] {line}", end="", flush=True)
+    exit_code = process.wait()
+    print(f"[USERBOT] process exited with code {exit_code}", flush=True)
 
 
 @app.get("/healthz")
@@ -112,12 +124,22 @@ def configure() -> Response:
         if userbot_process is not None and userbot_process.poll() is None:
             return html('<p class="ok">اليوزربوت يعمل بالفعل في هذه النسخة المؤقتة.</p>')
         userbot_process = subprocess.Popen(
-            [sys.executable, "-m", "zlzl"],
+            [sys.executable, "-u", "-m", "zlzl"],
             cwd=ROOT,
             env=environment,
-            stdout=sys.stdout,
-            stderr=sys.stderr,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.STDOUT,
+            text=True,
+            bufsize=1,
         )
+        threading.Thread(
+            target=stream_userbot_output,
+            args=(userbot_process,),
+            daemon=True,
+        ).start()
+        time.sleep(0.5)
+        if userbot_process.poll() is not None:
+            return html('<p class="err">تعذر بدء اليوزربوت. افتح سجل Render؛ ستظهر تفاصيل الخطأ تحت USERBOT.</p>')
     return html('<p class="ok">تم بدء اليوزربوت. راقب السجل من لوحة Render للتأكد من الإقلاع.</p>')
 
 
