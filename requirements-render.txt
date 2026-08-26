@@ -1,6 +1,7 @@
 Flask>=3.0
 Telethon
 heroku3
+telegraph
 GitPython
 IMDbPY
 Wand

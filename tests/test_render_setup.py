@@ -53,6 +53,7 @@ class RenderSetupTests(unittest.TestCase):
         self.assertIn("pytz", requirements)
         self.assertIn("GitPython", requirements)
         self.assertIn("lxml>=6.1.2", requirements)
+        self.assertIn("telegraph", requirements)
         self.assertNotIn("search-engine-parser", requirements)
         self.assertNotIn("html-telegraph-poster-v2", requirements)
 

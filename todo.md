@@ -34,3 +34,4 @@
 - [x] إصلاح تعريف VPS_NOLOAD لمنع تجاوز إضافات Render.
 - [x] منع التثبيت الداخلي المتكرر للحزم في إقلاع Render.
 - [x] إصلاح توافق lxml مع Python 3.14 في بناء Render.
+- [x] منع تثبيت html-telegraph-poster-v2 الداخلي غير المتوافق في Render.

@@ -10,21 +10,11 @@ from googletrans import Translator
 from PIL import Image, ImageOps
 from telethon import functions, types
 
-from ..utils.extdl import install_pip
-
 try:
     from imdb import IMDb
 except ModuleNotFoundError:
-    install_pip("IMDbPY")
-    from imdb import IMDb
-
-try:
-    # The v2 package supports modern Python releases and exposes the same
-    # TelegraphPoster interface used below.
-    from html_telegraph_poster_v2 import TelegraphPoster
-except ModuleNotFoundError:
-    install_pip("html-telegraph-poster-v2")
-    from html_telegraph_poster_v2 import TelegraphPoster
+    IMDb = None
+from .telegraph_compat import TelegraphPoster
 from PIL import Image, ImageColor, ImageDraw, ImageFont, ImageOps
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 from telethon.tl.functions.contacts import UnblockRequest as unblock
@@ -35,7 +25,7 @@ from ...sql_helper.globals import gvarstatus
 from ..resources.states import states
 
 LOGS = logging.getLogger(__name__)
-imdb = IMDb()
+imdb = IMDb() if IMDb is not None else None
 
 mov_titles = [
     "long imdb title",
