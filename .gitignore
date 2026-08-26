@@ -12,6 +12,7 @@ config.py
 *.sqlite3
 *.db
 extracted_channel_plugins/
+render_runtime.db
 downloads/
 temp/
 tmp/

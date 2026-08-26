@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: almutazil-temporary-setup
+    runtime: python
+    plan: free
+    buildCommand: python -m pip install --upgrade pip && python -m pip install -r requirements-render.txt
+    startCommand: python render_setup_web.py
+    autoDeployTrigger: off
+    healthCheckPath: /healthz
+    envVars:
+      - key: SETUP_PASSWORD
+        sync: false

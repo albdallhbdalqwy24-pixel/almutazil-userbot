@@ -1,0 +1,12 @@
+Flask>=3.0
+Telethon
+yt-dlp
+SQLAlchemy
+validators
+requests
+aiohttp
+Pillow
+lxml
+lxml_html_clean
+legacy-cgi
+html-telegraph-poster-v2
