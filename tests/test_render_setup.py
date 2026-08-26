@@ -42,6 +42,10 @@ class RenderSetupTests(unittest.TestCase):
         self.assertNotIn(b"hash-value", response.data)
         self.assertNotIn(b"session-value", response.data)
 
+    def test_render_requirements_include_core_boot_dependency(self) -> None:
+        requirements = (Path(__file__).resolve().parents[1] / "requirements-render.txt").read_text()
+        self.assertIn("heroku3", requirements)
+
 
 if __name__ == "__main__":
     unittest.main()
