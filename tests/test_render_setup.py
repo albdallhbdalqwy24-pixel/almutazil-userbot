@@ -52,7 +52,9 @@ class RenderSetupTests(unittest.TestCase):
         self.assertIn("lyricsgenius", requirements)
         self.assertIn("pytz", requirements)
         self.assertIn("GitPython", requirements)
-        self.assertIn("search-engine-parser", requirements)
+        self.assertIn("lxml>=6.1.2", requirements)
+        self.assertNotIn("search-engine-parser", requirements)
+        self.assertNotIn("html-telegraph-poster-v2", requirements)
 
 
 if __name__ == "__main__":

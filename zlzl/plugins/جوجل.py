@@ -8,8 +8,15 @@ from datetime import datetime
 import requests
 from bs4 import BeautifulSoup
 from PIL import Image
-from search_engine_parser import BingSearch, GoogleSearch, YahooSearch
-from search_engine_parser.core.exceptions import NoResultsOrTrafficError
+
+try:
+    from search_engine_parser import BingSearch, GoogleSearch, YahooSearch
+    from search_engine_parser.core.exceptions import NoResultsOrTrafficError
+except ModuleNotFoundError:
+    BingSearch = GoogleSearch = YahooSearch = None
+
+    class NoResultsOrTrafficError(Exception):
+        """Fallback when the legacy parser is unavailable on modern Python."""
 
 from . import BOTLOG, BOTLOG_CHATID, Convert, zedub
 
@@ -81,6 +88,12 @@ async def scam(results, lim):
 async def gsearch(q_event):
     "Google search command."
     zedevent = await edit_or_reply(q_event, "**- جـارِ البحـث في جوجــل...**")
+    if GoogleSearch is None:
+        return await edit_delete(
+            zedevent,
+            "**- بحث (جو) غير متاح مؤقتاً على استضافة Render الحديثة. استخدم أمر جوجل للرابط أو أعد المحاولة لاحقاً.**",
+            time=10,
+        )
     match = q_event.pattern_match.group(1)
     page = re.findall(r"صفحه\d+", match)
     lim = re.findall(r"عدد\d+", match)

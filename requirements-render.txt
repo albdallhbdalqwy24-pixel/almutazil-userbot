@@ -14,7 +14,6 @@ motor
 moviepy
 yt-dlp
 youtube-search-python
-search-engine-parser
 SQLAlchemy
 sqlalchemy-json
 ujson
@@ -25,7 +24,6 @@ aiohttp
 Pillow
 fonttools
 pytz
-lxml
+lxml>=6.1.2
 lxml_html_clean
 legacy-cgi
-html-telegraph-poster-v2
