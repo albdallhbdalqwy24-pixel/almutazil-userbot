@@ -3,6 +3,7 @@ Telethon
 heroku3
 yt-dlp
 SQLAlchemy
+sqlalchemy-json
 validators
 requests
 aiohttp

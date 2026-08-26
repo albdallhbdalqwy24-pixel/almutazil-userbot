@@ -45,6 +45,7 @@ class RenderSetupTests(unittest.TestCase):
     def test_render_requirements_include_core_boot_dependency(self) -> None:
         requirements = (Path(__file__).resolve().parents[1] / "requirements-render.txt").read_text()
         self.assertIn("heroku3", requirements)
+        self.assertIn("sqlalchemy-json", requirements)
 
 
 if __name__ == "__main__":
