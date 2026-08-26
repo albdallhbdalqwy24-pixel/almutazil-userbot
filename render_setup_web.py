@@ -25,7 +25,7 @@ userbot_process: subprocess.Popen[str] | None = None
 
 PAGE = """<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1"><title>إعداد ZTele المؤقت</title>
-<style>body{margin:0;background:#0f172a;color:#e2e8f0;font-family:system-ui;padding:24px}.box{max-width:640px;margin:auto;background:#172033;border:1px solid #334155;border-radius:16px;padding:24px}h1{margin-top:0}p{color:#cbd5e1;line-height:1.7}label{display:block;margin:15px 0 6px;font-weight:700}input{width:100%;box-sizing:border-box;padding:12px;border-radius:9px;border:1px solid #475569;background:#0b1220;color:#fff}button{margin-top:20px;width:100%;padding:13px;border:0;border-radius:9px;background:#2563eb;color:#fff;font-weight:700;font-size:16px}.note{background:#111827;padding:12px;border-radius:8px;font-size:14px}.ok{color:#86efac}.err{color:#fca5a5}</style></head><body><main class="box"><h1>إعداد ZTele المؤقت</h1>
+<style>body{margin:0;background:#0f172a;color:#e2e8f0;font-family:system-ui;padding:24px}.box{max-width:640px;margin:auto;background:#172033;border:1px solid #334155;border-radius:16px;padding:24px}h1{margin-top:0}p{color:#cbd5e1;line-height:1.7}label{display:block;margin:15px 0 6px;font-weight:700}input:not([type=checkbox]){width:100%;box-sizing:border-box;padding:12px;border-radius:9px;border:1px solid #475569;background:#0b1220;color:#fff}.check{display:flex;gap:10px;align-items:flex-start;background:#111827;padding:12px;border-radius:8px;font-weight:400}.check input{margin-top:4px}button{margin-top:20px;width:100%;padding:13px;border:0;border-radius:9px;background:#2563eb;color:#fff;font-weight:700;font-size:16px}.note{background:#111827;padding:12px;border-radius:8px;font-size:14px}.ok{color:#86efac}.err{color:#fca5a5}</style></head><body><main class="box"><h1>إعداد ZTele المؤقت</h1>
 <p>هذه الصفحة محمية. القيم تُرسل إلى عملية التشغيل فقط ولا تُحفظ في Git أو في <code>config.py</code>.</p>{message}
 <form method="post" action="/configure"><label>كلمة حماية الصفحة</label><input name="setup_password" type="password" required autocomplete="current-password">
 <label>API ID</label><input name="APP_ID" inputmode="numeric" required>
@@ -36,6 +36,7 @@ PAGE = """<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8">
 <label>اسم العرض</label><input name="ALIVE_NAME" value="ZTele">
 <label>معرف مجموعة السجل (اختياري)</label><input name="PRIVATE_GROUP_BOT_API_ID" value="0">
 <label>معرف مجموعة التخزين (اختياري)</label><input name="PM_LOGGER_GROUP_ID" value="0">
+<label class="check"><input name="AUTO_CREATE_LOG_GROUPS" type="checkbox" value="true"><span>إنشاء مجموعتي السجل والتخزين الناقصتين تلقائياً الآن. فعّلها مرة واحدة فقط، ثم انسخ المعرّفات من سجل Render لاستعمالها عند أي إعادة تشغيل لاحقة.</span></label>
 <button type="submit">حفظ وتشغيل مؤقتاً</button></form>
 <p class="note">تتوقف النسخة المجانية عند الخمول أو إعادة التشغيل، ولا تحفظ هذه القيم بعدها. لا تستخدمها لتشغيل دائم.</p></main></body></html>"""
 
@@ -75,7 +76,12 @@ def build_environment(values: dict[str, str]) -> dict[str, str]:
             "PM_LOGGER_GROUP_ID": safe_integer(values.get("PM_LOGGER_GROUP_ID", "0"), "معرف التخزين"),
             "DATABASE_URL": "sqlite:///render_runtime.db",
             "ENV": "1",
-            "AUTO_CREATE_LOG_GROUPS": "false",
+            "AUTO_CREATE_LOG_GROUPS": (
+                "true"
+                if values.get("AUTO_CREATE_LOG_GROUPS", "").lower()
+                in {"1", "true", "yes", "on"}
+                else "false"
+            ),
             "ZELZAL_A": "0",
             "PYTHONUNBUFFERED": "1",
         }

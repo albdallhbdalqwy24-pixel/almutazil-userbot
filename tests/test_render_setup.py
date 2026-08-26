@@ -37,11 +37,25 @@ class RenderSetupTests(unittest.TestCase):
         self.assertEqual(environment["ENV"], "1")
         self.assertEqual(environment["PYTHONUNBUFFERED"], "1")
 
+    def test_environment_enables_requested_group_creation(self) -> None:
+        environment = build_environment(
+            {
+                "APP_ID": "12345",
+                "API_HASH": "hash-value",
+                "STRING_SESSION": "session-value",
+                "TG_BOT_TOKEN": "token-value",
+                "OWNER_ID": "67890",
+                "AUTO_CREATE_LOG_GROUPS": "true",
+            }
+        )
+        self.assertEqual(environment["AUTO_CREATE_LOG_GROUPS"], "true")
+
     def test_page_contains_no_telegram_secret_default_values(self) -> None:
         response = app.test_client().get("/")
         self.assertEqual(response.status_code, 200)
         self.assertNotIn(b"hash-value", response.data)
         self.assertNotIn(b"session-value", response.data)
+        self.assertIn(b"AUTO_CREATE_LOG_GROUPS", response.data)
 
     def test_render_requirements_include_core_boot_dependency(self) -> None:
         requirements = (Path(__file__).resolve().parents[1] / "requirements-render.txt").read_text()

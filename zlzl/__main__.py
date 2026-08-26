@@ -98,7 +98,10 @@ async def ensure_requested_logger_groups():
         startup_module.BOTLOG = Config.BOTLOG
         startup_module.BOTLOG_CHATID = Config.BOTLOG_CHATID
         startup_module.PM_LOGGER_GROUP_ID = Config.PM_LOGGER_GROUP_ID
-        LOGS.info("تم إنشاء مجموعات السجل والتخزين وحفظ معرّفاتها محلياً.")
+        LOGS.info(
+            "تم إنشاء مجموعات السجل والتخزين. "
+            f"السجل={Config.PRIVATE_GROUP_BOT_API_ID}، التخزين={Config.PM_LOGGER_GROUP_ID}."
+        )
 
 
 async def startup_process():
