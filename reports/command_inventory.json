@@ -1,0 +1,3290 @@
+[
+  {
+    "file": "zlzl/assistant/botcontrols.py",
+    "line": 151,
+    "handler": "ban_starters",
+    "pattern": "المشتركين$"
+  },
+  {
+    "file": "zlzl/assistant/botcontrols.py",
+    "line": 225,
+    "handler": "ban_starters",
+    "pattern": "المحظورين$"
+  },
+  {
+    "file": "zlzl/assistant/botcontrols.py",
+    "line": 248,
+    "handler": "ban_antiflood",
+    "pattern": "مكافح التكرار (تفعيل|تعطيل)$"
+  },
+  {
+    "file": "zlzl/assistant/iytdl.py",
+    "line": 56,
+    "handler": "iytdl_inline",
+    "pattern": "يوت(?:\\s|$)([\\s\\S]*)"
+  },
+  {
+    "file": "zlzl/plugins/afk.py",
+    "line": 38,
+    "handler": "set_not_afk",
+    "pattern": "<missing-pattern>"
+  },
+  {
+    "file": "zlzl/plugins/afk.py",
+    "line": 86,
+    "handler": "on_afk",
+    "pattern": "<missing-pattern>"
+  },
+  {
+    "file": "zlzl/plugins/afk.py",
+    "line": 163,
+    "handler": "_",
+    "pattern": "سليب(?:\\s|$)([\\s\\S]*)"
+  },
+  {
+    "file": "zlzl/plugins/afk.py",
+    "line": 207,
+    "handler": "_",
+    "pattern": "سليب_ميديا(?:\\s|$)([\\s\\S]*)"
+  },
+  {
+    "file": "zlzl/plugins/android.py",
+    "line": 21,
+    "handler": "kakashi",
+    "pattern": "magisk$"
+  },
+  {
+    "file": "zlzl/plugins/android.py",
+    "line": 49,
+    "handler": "device_info",
+    "pattern": "device(?: |$)(\\S*)"
+  },
+  {
+    "file": "zlzl/plugins/android.py",
+    "line": 86,
+    "handler": "codename_info",
+    "pattern": "codename(?: |)([\\S]*)(?: |)([\\s\\S]*)"
+  },
+  {
+    "file": "zlzl/plugins/android.py",
+    "line": 137,
+    "handler": "twrp",
+    "pattern": "twrp(?: |$)(\\S*)"
+  },
+  {
+    "file": "zlzl/plugins/corecmds.py",
+    "line": 30,
+    "handler": "install",
+    "pattern": "(تنصيب|نصب)$"
+  },
+  {
+    "file": "zlzl/plugins/corecmds.py",
+    "line": 70,
+    "handler": "load",
+    "pattern": "حمل ([\\s\\S]*)"
+  },
+  {
+    "file": "zlzl/plugins/corecmds.py",
+    "line": 97,
+    "handler": "send",
+    "pattern": "ارسل ([\\s\\S]*)"
+  },
+  {
+    "file": "zlzl/plugins/corecmds.py",
+    "line": 131,
+    "handler": "unload",
+    "pattern": "الغاء حمل ([\\s\\S]*)"
+  },
+  {
+    "file": "zlzl/plugins/corecmds.py",
+    "line": 155,
+    "handler": "unload",
+    "pattern": "الغاء نصب ([\\s\\S]*)"
+  },
+  {
+    "file": "zlzl/plugins/corecmds.py",
+    "line": 195,
+    "handler": "unload",
+    "pattern": "الغاء تنصيب ([\\s\\S]*)"
+  },
+  {
+    "file": "zlzl/plugins/json.py",
+    "line": 17,
+    "handler": "_",
+    "pattern": "json$"
+  },
+  {
+    "file": "zlzl/plugins/json.py",
+    "line": 32,
+    "handler": "_",
+    "pattern": "yaml$"
+  },
+  {
+    "file": "zlzl/plugins/markdown.py",
+    "line": 167,
+    "handler": "reparse",
+    "pattern": "<missing-pattern>"
+  },
+  {
+    "file": "zlzl/plugins/markdown.py",
+    "line": 189,
+    "handler": "mention",
+    "pattern": "<missing-pattern>"
+  },
+  {
+    "file": "zlzl/plugins/mention.py",
+    "line": 21,
+    "handler": "_",
+    "pattern": "(tagall|alll)(?:\\s|$)([\\s\\S]*)"
+  },
+  {
+    "file": "zlzl/plugins/mention.py",
+    "line": 41,
+    "handler": "_",
+    "pattern": "report$"
+  },
+  {
+    "file": "zlzl/plugins/mention.py",
+    "line": 67,
+    "handler": "_",
+    "pattern": "men ([\\s\\S]*)"
+  },
+  {
+    "file": "zlzl/plugins/tools.py",
+    "line": 43,
+    "handler": "currency",
+    "pattern": "cur(?:\\s|$)([\\s\\S]*)"
+  },
+  {
+    "file": "zlzl/plugins/tools.py",
+    "line": 100,
+    "handler": "scan",
+    "pattern": "scan( -i)?$"
+  },
+  {
+    "file": "zlzl/plugins/tools.py",
+    "line": 150,
+    "handler": "parseqr",
+    "pattern": "decode$"
+  },
+  {
+    "file": "zlzl/plugins/tools.py",
+    "line": 180,
+    "handler": "_",
+    "pattern": "barcode ?([\\s\\S]*)"
+  },
+  {
+    "file": "zlzl/plugins/tools.py",
+    "line": 232,
+    "handler": "make_qr",
+    "pattern": "makeqr(?: |$)([\\s\\S]*)"
+  },
+  {
+    "file": "zlzl/plugins/tools.py",
+    "line": 276,
+    "handler": "_",
+    "pattern": "cal ([\\s\\S]*)"
+  },
+  {
+    "file": "zlzl/plugins/tools.py",
+    "line": 305,
+    "handler": "spy",
+    "pattern": "ip(?:\\s|$)([\\s\\S]*)"
+  },
+  {
+    "file": "zlzl/plugins/tools.py",
+    "line": 387,
+    "handler": "_",
+    "pattern": "ifsc ([\\s\\S]*)"
+  },
+  {
+    "file": "zlzl/plugins/tools.py",
+    "line": 410,
+    "handler": "_",
+    "pattern": "color ([\\s\\S]*)"
+  },
+  {
+    "file": "zlzl/plugins/tools.py",
+    "line": 445,
+    "handler": "_",
+    "pattern": "xkcd(?:\\s|$)([\\s\\S]*)"
+  },
+  {
+    "file": "zlzl/plugins/urltools.py",
+    "line": 24,
+    "handler": "_",
+    "pattern": "(دومين|دنس|dns)(?:\\s|$)([\\s\\S]*)"
+  },
+  {
+    "file": "zlzl/plugins/urltools.py",
+    "line": 56,
+    "handler": "_",
+    "pattern": "(اختصار|مصغر)(?:\\s|$)([\\s\\S]*)"
+  },
+  {
+    "file": "zlzl/plugins/urltools.py",
+    "line": 88,
+    "handler": "_",
+    "pattern": "الغاء اختصار(?:\\s|$)([\\s\\S]*)"
+  },
+  {
+    "file": "zlzl/plugins/urltools.py",
+    "line": 129,
+    "handler": "_",
+    "pattern": "اخفاء(?:\\s|$)([\\s\\S]*)"
+  },
+  {
+    "file": "zlzl/plugins/urltools.py",
+    "line": 147,
+    "handler": "upload_files",
+    "pattern": "رفع ملف$"
+  },
+  {
+    "file": "zlzl/plugins/vcmanager.py",
+    "line": 48,
+    "handler": "start_vc",
+    "pattern": "بدء مكالمه$"
+  },
+  {
+    "file": "zlzl/plugins/vcmanager.py",
+    "line": 74,
+    "handler": "end_vc",
+    "pattern": "انهاء مكالمه$"
+  },
+  {
+    "file": "zlzl/plugins/vcmanager.py",
+    "line": 99,
+    "handler": "inv_vc",
+    "pattern": "دعوه ?(.*)?"
+  },
+  {
+    "file": "zlzl/plugins/vcmanager.py",
+    "line": 135,
+    "handler": "info_vc",
+    "pattern": "معلومات المكالمه"
+  },
+  {
+    "file": "zlzl/plugins/vcmanager.py",
+    "line": 166,
+    "handler": "title_vc",
+    "pattern": "عنوان?(.*)?"
+  },
+  {
+    "file": "zlzl/plugins/vcmanager.py",
+    "line": 193,
+    "handler": "mute_vc",
+    "pattern": "(|الغاء )اسكت ([\\s\\S]*)"
+  },
+  {
+    "file": "zlzl/plugins/vcmanager.py",
+    "line": 239,
+    "handler": "unmute_vc",
+    "pattern": "<missing-pattern>"
+  },
+  {
+    "file": "zlzl/plugins/vcplayer.py",
+    "line": 71,
+    "handler": "joinVoicechat",
+    "pattern": "انضمام ?(\\S+)? ?(?:ك)? ?(\\S+)?"
+  },
+  {
+    "file": "zlzl/plugins/vcplayer.py",
+    "line": 115,
+    "handler": "leaveVoicechat",
+    "pattern": "خروج"
+  },
+  {
+    "file": "zlzl/plugins/vcplayer.py",
+    "line": 136,
+    "handler": "get_playlist",
+    "pattern": "قائمة التشغيل"
+  },
+  {
+    "file": "zlzl/plugins/vcplayer.py",
+    "line": 172,
+    "handler": "play_video",
+    "pattern": "شغل فيديو ?(1)? ?([\\S ]*)?"
+  },
+  {
+    "file": "zlzl/plugins/vcplayer.py",
+    "line": 256,
+    "handler": "play_audio",
+    "pattern": "شغل ?(1)? ?([\\S ]*)?"
+  },
+  {
+    "file": "zlzl/plugins/vcplayer.py",
+    "line": 329,
+    "handler": "pause_stream",
+    "pattern": "توقف"
+  },
+  {
+    "file": "zlzl/plugins/vcplayer.py",
+    "line": 346,
+    "handler": "resume_stream",
+    "pattern": "كمل"
+  },
+  {
+    "file": "zlzl/plugins/vcplayer.py",
+    "line": 363,
+    "handler": "skip_stream",
+    "pattern": "تخطي"
+  },
+  {
+    "file": "zlzl/plugins/vcplayer.py",
+    "line": 393,
+    "handler": "cmd",
+    "pattern": "الميوزك"
+  },
+  {
+    "file": "zlzl/plugins/vcplayer.py",
+    "line": 397,
+    "handler": "cmd",
+    "pattern": "ميوزك"
+  },
+  {
+    "file": "zlzl/plugins/استفتاء.py",
+    "line": 25,
+    "handler": "pollcreator",
+    "pattern": "استفتاء(?:\\s|$)([\\s\\S]*)"
+  },
+  {
+    "file": "zlzl/plugins/افتارات.py",
+    "line": 27,
+    "handler": "_",
+    "pattern": "حالات$"
+  },
+  {
+    "file": "zlzl/plugins/افتارات.py",
+    "line": 48,
+    "handler": "_",
+    "pattern": "ستوري انمي$"
+  },
+  {
+    "file": "zlzl/plugins/افتارات.py",
+    "line": 69,
+    "handler": "_",
+    "pattern": "رقيه$"
+  },
+  {
+    "file": "zlzl/plugins/افتارات.py",
+    "line": 90,
+    "handler": "_",
+    "pattern": "رمادي$"
+  },
+  {
+    "file": "zlzl/plugins/افتارات.py",
+    "line": 111,
+    "handler": "_",
+    "pattern": "رماديه$"
+  },
+  {
+    "file": "zlzl/plugins/افتارات.py",
+    "line": 132,
+    "handler": "_",
+    "pattern": "بيست$"
+  },
+  {
+    "file": "zlzl/plugins/افتارات.py",
+    "line": 153,
+    "handler": "_",
+    "pattern": "حب$"
+  },
+  {
+    "file": "zlzl/plugins/افتارات.py",
+    "line": 174,
+    "handler": "_",
+    "pattern": "رياكشن$"
+  },
+  {
+    "file": "zlzl/plugins/افتارات.py",
+    "line": 195,
+    "handler": "_",
+    "pattern": "ادت$"
+  },
+  {
+    "file": "zlzl/plugins/افتارات.py",
+    "line": 216,
+    "handler": "_",
+    "pattern": "غنيلي$"
+  },
+  {
+    "file": "zlzl/plugins/افتارات.py",
+    "line": 237,
+    "handler": "_",
+    "pattern": "شعر$"
+  },
+  {
+    "file": "zlzl/plugins/افتارات.py",
+    "line": 258,
+    "handler": "_",
+    "pattern": "ميمز$"
+  },
+  {
+    "file": "zlzl/plugins/افتارات.py",
+    "line": 279,
+    "handler": "_",
+    "pattern": "ري اكشن$"
+  },
+  {
+    "file": "zlzl/plugins/افتارات.py",
+    "line": 300,
+    "handler": "_",
+    "pattern": "معلومه$"
+  },
+  {
+    "file": "zlzl/plugins/افتارات.py",
+    "line": 321,
+    "handler": "_",
+    "pattern": "تويت$"
+  },
+  {
+    "file": "zlzl/plugins/افتارات.py",
+    "line": 342,
+    "handler": "_",
+    "pattern": "خيرني$"
+  },
+  {
+    "file": "zlzl/plugins/افتارات.py",
+    "line": 363,
+    "handler": "_",
+    "pattern": "ولد انمي$"
+  },
+  {
+    "file": "zlzl/plugins/افتارات.py",
+    "line": 384,
+    "handler": "_",
+    "pattern": "بنت انمي$"
+  },
+  {
+    "file": "zlzl/plugins/افتارات.py",
+    "line": 405,
+    "handler": "_",
+    "pattern": "بنات$"
+  },
+  {
+    "file": "zlzl/plugins/الادمن.py",
+    "line": 56,
+    "handler": "zedgban",
+    "pattern": "ح عام(?:\\s|$)([\\s\\S]*)"
+  },
+  {
+    "file": "zlzl/plugins/الادمن.py",
+    "line": 144,
+    "handler": "zedgban",
+    "pattern": "الغاء ح عام(?:\\s|$)([\\s\\S]*)"
+  },
+  {
+    "file": "zlzl/plugins/الادمن.py",
+    "line": 220,
+    "handler": "gablist",
+    "pattern": "العام$"
+  },
+  {
+    "file": "zlzl/plugins/الادمن.py",
+    "line": 245,
+    "handler": "catgkick",
+    "pattern": "ط عام(?:\\s|$)([\\s\\S]*)"
+  },
+  {
+    "file": "zlzl/plugins/الادمن.py",
+    "line": 419,
+    "handler": "set_group_photo",
+    "pattern": "الصورة (وضع|حذف)$"
+  },
+  {
+    "file": "zlzl/plugins/الادمن.py",
+    "line": 464,
+    "handler": "promote",
+    "pattern": "<dynamic:f'{ADMZ}(?:\\\\s|$)([\\\\s\\\\S]*)'>"
+  },
+  {
+    "file": "zlzl/plugins/الادمن.py",
+    "line": 500,
+    "handler": "promote",
+    "pattern": "رفع مالك(?:\\s|$)([\\s\\S]*)"
+  },
+  {
+    "file": "zlzl/plugins/الادمن.py",
+    "line": 537,
+    "handler": "promote",
+    "pattern": "اخفاء(?:\\s|$)([\\s\\S]*)"
+  },
+  {
+    "file": "zlzl/plugins/الادمن.py",
+    "line": 575,
+    "handler": "demote",
+    "pattern": "<dynamic:f'{UNADMZ}(?:\\\\s|$)([\\\\s\\\\S]*)'>"
+  },
+  {
+    "file": "zlzl/plugins/الادمن.py",
+    "line": 610,
+    "handler": "_ban_person",
+    "pattern": "<dynamic:f'{BANN}(?:\\\\s|$)([\\\\s\\\\S]*)'>"
+  },
+  {
+    "file": "zlzl/plugins/الادمن.py",
+    "line": 679,
+    "handler": "nothanos",
+    "pattern": "<dynamic:f'{UNBANN}(?:\\\\s|$)([\\\\s\\\\S]*)'>"
+  },
+  {
+    "file": "zlzl/plugins/الادمن.py",
+    "line": 703,
+    "handler": "watcher",
+    "pattern": "<missing-pattern>"
+  },
+  {
+    "file": "zlzl/plugins/الادمن.py",
+    "line": 712,
+    "handler": "kick",
+    "pattern": "<dynamic:f'{KICK}(?:\\\\s|$)([\\\\s\\\\S]*)'>"
+  },
+  {
+    "file": "zlzl/plugins/الادمن.py",
+    "line": 752,
+    "handler": "pin",
+    "pattern": "تثبيت( بالاشعار|$)"
+  },
+  {
+    "file": "zlzl/plugins/الادمن.py",
+    "line": 792,
+    "handler": "unpin",
+    "pattern": "الغاء تثبيت( الكل|$)"
+  },
+  {
+    "file": "zlzl/plugins/الادمن.py",
+    "line": 849,
+    "handler": "_iundlt",
+    "pattern": "الاحداث( م)?(?: |$)(\\d*)?"
+  },
+  {
+    "file": "zlzl/plugins/الازعاج.py",
+    "line": 28,
+    "handler": "echo",
+    "pattern": "(تقليد|ازعاج)$"
+  },
+  {
+    "file": "zlzl/plugins/الازعاج.py",
+    "line": 59,
+    "handler": "echo",
+    "pattern": "(الغاء تقليد|ايقاف التقليد|ايقاف تقليد|الغاء الازعاج|ايقاف الازعاج|ايقاف ازعاج|الغاء ازعاج)$"
+  },
+  {
+    "file": "zlzl/plugins/الازعاج.py",
+    "line": 77,
+    "handler": "echo",
+    "pattern": "حذف المقلدهم( للكل)?"
+  },
+  {
+    "file": "zlzl/plugins/الازعاج.py",
+    "line": 110,
+    "handler": "echo",
+    "pattern": "المقلدهم( للكل)?$"
+  },
+  {
+    "file": "zlzl/plugins/الازعاج.py",
+    "line": 158,
+    "handler": "samereply",
+    "pattern": "<missing-pattern>"
+  },
+  {
+    "file": "zlzl/plugins/الانشاء.py",
+    "line": 25,
+    "handler": "_",
+    "pattern": "انشاء (كروب|خارق|قناه) ([\\s\\S]*)"
+  },
+  {
+    "file": "zlzl/plugins/الاوامر.py",
+    "line": 52,
+    "handler": "basic_help",
+    "pattern": "(?:مساعدة|مساعده)(?: |$)(.*)"
+  },
+  {
+    "file": "zlzl/plugins/الاوامر.py",
+    "line": 62,
+    "handler": "command_index",
+    "pattern": "(?:اوامري|الاوامر|الأوامر)(?: |$)(.*)"
+  },
+  {
+    "file": "zlzl/plugins/الاوامر.py",
+    "line": 75,
+    "handler": "command_load_status",
+    "pattern": "حالة (?:الاوامر|الأوامر)(?: |$)(.*)"
+  },
+  {
+    "file": "zlzl/plugins/الاوامر.py",
+    "line": 388,
+    "handler": "repozedub",
+    "pattern": "زدثون"
+  },
+  {
+    "file": "zlzl/plugins/الاوامر.py",
+    "line": 417,
+    "handler": "repozedub",
+    "pattern": "السورس"
+  },
+  {
+    "file": "zlzl/plugins/الاوامر.py",
+    "line": 446,
+    "handler": "repozedub",
+    "pattern": "سورس"
+  },
+  {
+    "file": "zlzl/plugins/الاوامر.py",
+    "line": 508,
+    "handler": "repozedub",
+    "pattern": "اليدوي(?: |$)(.*)"
+  },
+  {
+    "file": "zlzl/plugins/الاوامر.py",
+    "line": 542,
+    "handler": "repozedub",
+    "pattern": "الفيزا(?: |$)(.*)"
+  },
+  {
+    "file": "zlzl/plugins/الاوامر.py",
+    "line": 576,
+    "handler": "repozedub",
+    "pattern": "الهيروكو(?: |$)(.*)"
+  },
+  {
+    "file": "zlzl/plugins/الاوامر.py",
+    "line": 610,
+    "handler": "repozedub",
+    "pattern": "التنصيب(?: |$)(.*)"
+  },
+  {
+    "file": "zlzl/plugins/البروفايل.py",
+    "line": 35,
+    "handler": "_",
+    "pattern": "ضع بايو(?: |$)(.*)"
+  },
+  {
+    "file": "zlzl/plugins/البروفايل.py",
+    "line": 50,
+    "handler": "_",
+    "pattern": "ضع اسم(?: |$)(.*)"
+  },
+  {
+    "file": "zlzl/plugins/البروفايل.py",
+    "line": 73,
+    "handler": "_",
+    "pattern": "ضع صورة$"
+  },
+  {
+    "file": "zlzl/plugins/البروفايل.py",
+    "line": 122,
+    "handler": "update_username",
+    "pattern": "(ضع معرف|ضع يوزر)(?: |$)(.*)"
+  },
+  {
+    "file": "zlzl/plugins/البروفايل.py",
+    "line": 139,
+    "handler": "count",
+    "pattern": "الحساب$"
+  },
+  {
+    "file": "zlzl/plugins/البروفايل.py",
+    "line": 175,
+    "handler": "remove_profilepic",
+    "pattern": "حذف صوره ?(.*)"
+  },
+  {
+    "file": "zlzl/plugins/البروفايل.py",
+    "line": 202,
+    "handler": "_",
+    "pattern": "انشائي$"
+  },
+  {
+    "file": "zlzl/plugins/التاك.py",
+    "line": 37,
+    "handler": "tagall",
+    "pattern": "all?(.*)"
+  },
+  {
+    "file": "zlzl/plugins/التاك.py",
+    "line": 87,
+    "handler": "stop_tagall",
+    "pattern": "ايقاف التاك?(.*)"
+  },
+  {
+    "file": "zlzl/plugins/التاك.py",
+    "line": 99,
+    "handler": "tagall",
+    "pattern": "تاك(?:\\s|$)([\\s\\S]*)"
+  },
+  {
+    "file": "zlzl/plugins/التاك.py",
+    "line": 148,
+    "handler": "_",
+    "pattern": "تبليغ$"
+  },
+  {
+    "file": "zlzl/plugins/التاك.py",
+    "line": 169,
+    "handler": "permalink",
+    "pattern": "منشن(?:\\s|$)([\\s\\S]*)"
+  },
+  {
+    "file": "zlzl/plugins/التحشيش.py",
+    "line": 30,
+    "handler": "_",
+    "pattern": "رابط الحذف"
+  },
+  {
+    "file": "zlzl/plugins/التحشيش.py",
+    "line": 34,
+    "handler": "_",
+    "pattern": "بوت الحذف"
+  },
+  {
+    "file": "zlzl/plugins/التحشيش.py",
+    "line": 38,
+    "handler": "permalink",
+    "pattern": "رفع جلب(?: |$)(.*)"
+  },
+  {
+    "file": "zlzl/plugins/التحشيش.py",
+    "line": 53,
+    "handler": "permalink",
+    "pattern": "رفع مرتي(?: |$)(.*)"
+  },
+  {
+    "file": "zlzl/plugins/التحشيش.py",
+    "line": 68,
+    "handler": "permalink",
+    "pattern": "رفع تاج(?: |$)(.*)"
+  },
+  {
+    "file": "zlzl/plugins/التحشيش.py",
+    "line": 79,
+    "handler": "permalink",
+    "pattern": "رفع بكلبي(?: |$)(.*)"
+  },
+  {
+    "file": "zlzl/plugins/التحشيش.py",
+    "line": 90,
+    "handler": "permalink",
+    "pattern": "رفع بقلبي(?: |$)(.*)"
+  },
+  {
+    "file": "zlzl/plugins/التحشيش.py",
+    "line": 101,
+    "handler": "permalink",
+    "pattern": "رفع قلبي(?: |$)(.*)"
+  },
+  {
+    "file": "zlzl/plugins/التحشيش.py",
+    "line": 112,
+    "handler": "permalink",
+    "pattern": "رفع جريذي(?: |$)(.*)"
+  },
+  {
+    "file": "zlzl/plugins/التحشيش.py",
+    "line": 127,
+    "handler": "permalink",
+    "pattern": "رفع فرخ(?: |$)(.*)"
+  },
+  {
+    "file": "zlzl/plugins/التحشيش.py",
+    "line": 454,
+    "handler": "ahmed",
+    "pattern": "كت(?: |$)(.*)"
+  },
+  {
+    "file": "zlzl/plugins/التحشيش.py",
+    "line": 472,
+    "handler": "zed",
+    "pattern": "(نسبه الحب|نسبة الحب)(?: |$)(.*)"
+  },
+  {
+    "file": "zlzl/plugins/التحشيش.py",
+    "line": 481,
+    "handler": "zed",
+    "pattern": "(نسبه الانوثة|نسبة الانوثه|نسبه الانوثه|نسبة الانوثة)(?: |$)(.*)"
+  },
+  {
+    "file": "zlzl/plugins/التحشيش.py",
+    "line": 494,
+    "handler": "permalink",
+    "pattern": "(نسبه الغباء|نسبة الغباء)(?: |$)(.*)"
+  },
+  {
+    "file": "zlzl/plugins/التحشيش.py",
+    "line": 507,
+    "handler": "permalink",
+    "pattern": "(نسبه الانحراف|نسبة الانحراف)(?: |$)(.*)"
+  },
+  {
+    "file": "zlzl/plugins/التحشيش.py",
+    "line": 520,
+    "handler": "permalink",
+    "pattern": "(نسبه المثليه|نسبة المثليه)(?: |$)(.*)"
+  },
+  {
+    "file": "zlzl/plugins/التحشيش.py",
+    "line": 533,
+    "handler": "permalink",
+    "pattern": "(نسبه النجاح|نسبة النجاح)(?: |$)(.*)"
+  },
+  {
+    "file": "zlzl/plugins/التحشيش.py",
+    "line": 542,
+    "handler": "permalink",
+    "pattern": "(نسبه الكراهية|نسبة الكراهيه|نسبه الكراهيه|نسبة الكراهية)(?: |$)(.*)"
+  },
+  {
+    "file": "zlzl/plugins/التحشيش.py",
+    "line": 551,
+    "handler": "zed",
+    "pattern": "رفع ورع(?: |$)(.*)"
+  },
+  {
+    "file": "zlzl/plugins/التحشيش.py",
+    "line": 563,
+    "handler": "zed",
+    "pattern": "رفع مزه(?: |$)(.*)"
+  },
+  {
+    "file": "zlzl/plugins/التحشيش.py",
+    "line": 575,
+    "handler": "zed",
+    "pattern": "رفع مطي(?: |$)(.*)"
+  },
+  {
+    "file": "zlzl/plugins/التحشيش.py",
+    "line": 587,
+    "handler": "zed",
+    "pattern": "رفع حمار(?: |$)(.*)"
+  },
+  {
+    "file": "zlzl/plugins/التحشيش.py",
+    "line": 599,
+    "handler": "zed",
+    "pattern": "رفع خروف(?: |$)(.*)"
+  },
+  {
+    "file": "zlzl/plugins/التحشيش.py",
+    "line": 611,
+    "handler": "permalink",
+    "pattern": "رفع حيوان(?: |$)(.*)"
+  },
+  {
+    "file": "zlzl/plugins/التحشيش.py",
+    "line": 625,
+    "handler": "permalink",
+    "pattern": "رفع بزون(?: |$)(.*)"
+  },
+  {
+    "file": "zlzl/plugins/التحشيش.py",
+    "line": 641,
+    "handler": "zed",
+    "pattern": "رفع زباله(?: |$)(.*)"
+  },
+  {
+    "file": "zlzl/plugins/التحشيش.py",
+    "line": 653,
+    "handler": "zed",
+    "pattern": "رفع منشئ(?: |$)(.*)"
+  },
+  {
+    "file": "zlzl/plugins/التحشيش.py",
+    "line": 661,
+    "handler": "zed",
+    "pattern": "رفع مدير(?: |$)(.*)"
+  },
+  {
+    "file": "zlzl/plugins/التحشيش.py",
+    "line": 669,
+    "handler": "zed",
+    "pattern": "رفع كواد(?: |$)(.*)"
+  },
+  {
+    "file": "zlzl/plugins/التحشيش.py",
+    "line": 681,
+    "handler": "zed",
+    "pattern": "رفع مرتبط(?: |$)(.*)"
+  },
+  {
+    "file": "zlzl/plugins/التحشيش.py",
+    "line": 693,
+    "handler": "zed",
+    "pattern": "رفع مرتبطه(?: |$)(.*)"
+  },
+  {
+    "file": "zlzl/plugins/التحشيش.py",
+    "line": 705,
+    "handler": "zed",
+    "pattern": "رفع حبيبي(?: |$)(.*)"
+  },
+  {
+    "file": "zlzl/plugins/التحشيش.py",
+    "line": 713,
+    "handler": "zed",
+    "pattern": "رفع خطيبتي(?: |$)(.*)"
+  },
+  {
+    "file": "zlzl/plugins/التحشيش.py",
+    "line": 725,
+    "handler": "zed",
+    "pattern": "رفع صاك(?: |$)(.*)"
+  },
+  {
+    "file": "zlzl/plugins/التحشيش.py",
+    "line": 733,
+    "handler": "zed",
+    "pattern": "رفع صاكه(?: |$)(.*)"
+  },
+  {
+    "file": "zlzl/plugins/التحشيش.py",
+    "line": 741,
+    "handler": "zed",
+    "pattern": "رفع حات(?: |$)(.*)"
+  },
+  {
+    "file": "zlzl/plugins/التحشيش.py",
+    "line": 749,
+    "handler": "zed",
+    "pattern": "رفع حاته(?: |$)(.*)"
+  },
+  {
+    "file": "zlzl/plugins/التحشيش.py",
+    "line": 757,
+    "handler": "permalink",
+    "pattern": "اوصف(?: |$)(.*)"
+  },
+  {
+    "file": "zlzl/plugins/التحشيش.py",
+    "line": 770,
+    "handler": "permalink",
+    "pattern": "هينه(?: |$)(.*)"
+  },
+  {
+    "file": "zlzl/plugins/التحشيش.py",
+    "line": 784,
+    "handler": "cmd",
+    "pattern": "التحشيش"
+  },
+  {
+    "file": "zlzl/plugins/التخزين.py",
+    "line": 25,
+    "handler": "monito_p_m_s",
+    "pattern": "<missing-pattern>"
+  },
+  {
+    "file": "zlzl/plugins/التخزين.py",
+    "line": 56,
+    "handler": "log_tagged_messages",
+    "pattern": "<missing-pattern>"
+  },
+  {
+    "file": "zlzl/plugins/التخزين.py",
+    "line": 116,
+    "handler": "log",
+    "pattern": "خزن(?:\\s|$)([\\s\\S]*)"
+  },
+  {
+    "file": "zlzl/plugins/التخزين.py",
+    "line": 145,
+    "handler": "set_no_log_p_m",
+    "pattern": "تفعيل التخزين$"
+  },
+  {
+    "file": "zlzl/plugins/التخزين.py",
+    "line": 165,
+    "handler": "set_no_log_p_m",
+    "pattern": "تعطيل التخزين$"
+  },
+  {
+    "file": "zlzl/plugins/التخزين.py",
+    "line": 186,
+    "handler": "set_pmlog",
+    "pattern": "تخزين الخاص (تفعيل|تعطيل)$"
+  },
+  {
+    "file": "zlzl/plugins/التخزين.py",
+    "line": 225,
+    "handler": "set_grplog",
+    "pattern": "تخزين الكروبات (تفعيل|تعطيل)$"
+  },
+  {
+    "file": "zlzl/plugins/التسليه.py",
+    "line": 40,
+    "handler": "kek",
+    "pattern": "سبونج بوب"
+  },
+  {
+    "file": "zlzl/plugins/التسليه.py",
+    "line": 57,
+    "handler": "dog",
+    "pattern": "جلبي"
+  },
+  {
+    "file": "zlzl/plugins/التسليه.py",
+    "line": 107,
+    "handler": "fox",
+    "pattern": "ثعلب"
+  },
+  {
+    "file": "zlzl/plugins/التسليه.py",
+    "line": 112,
+    "handler": "elephant",
+    "pattern": "فيل"
+  },
+  {
+    "file": "zlzl/plugins/التسليه.py",
+    "line": 117,
+    "handler": "homer",
+    "pattern": "معصب"
+  },
+  {
+    "file": "zlzl/plugins/التسليه.py",
+    "line": 122,
+    "handler": "pig",
+    "pattern": "خنزير"
+  },
+  {
+    "file": "zlzl/plugins/التسليه.py",
+    "line": 143,
+    "handler": "man",
+    "pattern": "مان"
+  },
+  {
+    "file": "zlzl/plugins/التسليه.py",
+    "line": 167,
+    "handler": "sdma",
+    "pattern": "صدمه"
+  },
+  {
+    "file": "zlzl/plugins/التسليه.py",
+    "line": 191,
+    "handler": "nadm",
+    "pattern": "نادم"
+  },
+  {
+    "file": "zlzl/plugins/التسليه.py",
+    "line": 215,
+    "handler": "trmb",
+    "pattern": "ترمب"
+  },
+  {
+    "file": "zlzl/plugins/التسليه.py",
+    "line": 239,
+    "handler": "hmm",
+    "pattern": "همم"
+  },
+  {
+    "file": "zlzl/plugins/التسليه.py",
+    "line": 264,
+    "handler": "chan",
+    "pattern": "تشان"
+  },
+  {
+    "file": "zlzl/plugins/التسليه.py",
+    "line": 274,
+    "handler": "sakk",
+    "pattern": "صاك"
+  },
+  {
+    "file": "zlzl/plugins/التسليه.py",
+    "line": 296,
+    "handler": "marth",
+    "pattern": "معارض"
+  },
+  {
+    "file": "zlzl/plugins/التسليه.py",
+    "line": 302,
+    "handler": "_",
+    "pattern": "مروحيه(?: |$)(.*)"
+  },
+  {
+    "file": "zlzl/plugins/التسليه.py",
+    "line": 567,
+    "handler": "permalink",
+    "pattern": "ابره(?:\\s|$)([\\s\\S]*)"
+  },
+  {
+    "file": "zlzl/plugins/التسليه.py",
+    "line": 599,
+    "handler": "cmd",
+    "pattern": "تسليه1"
+  },
+  {
+    "file": "zlzl/plugins/التسليه.py",
+    "line": 606,
+    "handler": "_",
+    "pattern": "افكر$"
+  },
+  {
+    "file": "zlzl/plugins/التسليه.py",
+    "line": 616,
+    "handler": "_",
+    "pattern": "متت$"
+  },
+  {
+    "file": "zlzl/plugins/التسليه.py",
+    "line": 626,
+    "handler": "_",
+    "pattern": "ضايج$"
+  },
+  {
+    "file": "zlzl/plugins/التسليه.py",
+    "line": 636,
+    "handler": "_",
+    "pattern": "ساعه$"
+  },
+  {
+    "file": "zlzl/plugins/التسليه.py",
+    "line": 646,
+    "handler": "_",
+    "pattern": "مح$"
+  },
+  {
+    "file": "zlzl/plugins/التسليه.py",
+    "line": 656,
+    "handler": "_",
+    "pattern": "قلب$"
+  },
+  {
+    "file": "zlzl/plugins/التسليه.py",
+    "line": 666,
+    "handler": "_",
+    "pattern": "جيم$"
+  },
+  {
+    "file": "zlzl/plugins/التسليه.py",
+    "line": 676,
+    "handler": "_",
+    "pattern": "<dynamic:f'ارض$'>"
+  },
+  {
+    "file": "zlzl/plugins/التسليه.py",
+    "line": 686,
+    "handler": "_",
+    "pattern": "قمر$"
+  },
+  {
+    "file": "zlzl/plugins/التسليه.py",
+    "line": 696,
+    "handler": "_",
+    "pattern": "<dynamic:f'اقمار$'>"
+  },
+  {
+    "file": "zlzl/plugins/التسليه.py",
+    "line": 717,
+    "handler": "_",
+    "pattern": "<dynamic:f'قمور$'>"
+  },
+  {
+    "file": "zlzl/plugins/التسليه.py",
+    "line": 762,
+    "handler": "test",
+    "pattern": "القمر$"
+  },
+  {
+    "file": "zlzl/plugins/التسليه.py",
+    "line": 770,
+    "handler": "test",
+    "pattern": "مدينه$"
+  },
+  {
+    "file": "zlzl/plugins/التسليه.py",
+    "line": 808,
+    "handler": "cmd",
+    "pattern": "تسليه2"
+  },
+  {
+    "file": "zlzl/plugins/التسليه.py",
+    "line": 813,
+    "handler": "_",
+    "pattern": "غبي$"
+  },
+  {
+    "file": "zlzl/plugins/التسليه.py",
+    "line": 838,
+    "handler": "_",
+    "pattern": "قتل$"
+  },
+  {
+    "file": "zlzl/plugins/التسليه.py",
+    "line": 862,
+    "handler": "_",
+    "pattern": "شنو$"
+  },
+  {
+    "file": "zlzl/plugins/التسليه.py",
+    "line": 879,
+    "handler": "_",
+    "pattern": "طوبه$"
+  },
+  {
+    "file": "zlzl/plugins/التسليه.py",
+    "line": 901,
+    "handler": "_",
+    "pattern": "مربعات$"
+  },
+  {
+    "file": "zlzl/plugins/التسليه.py",
+    "line": 928,
+    "handler": "_",
+    "pattern": "حلويات$"
+  },
+  {
+    "file": "zlzl/plugins/التسليه.py",
+    "line": 938,
+    "handler": "_",
+    "pattern": "حرق$"
+  },
+  {
+    "file": "zlzl/plugins/التسليه.py",
+    "line": 956,
+    "handler": "_",
+    "pattern": "قنابل$"
+  },
+  {
+    "file": "zlzl/plugins/التسليه.py",
+    "line": 981,
+    "handler": "_",
+    "pattern": "جو$"
+  },
+  {
+    "file": "zlzl/plugins/التسليه.py",
+    "line": 998,
+    "handler": "_",
+    "pattern": "كليم$"
+  },
+  {
+    "file": "zlzl/plugins/التسليه.py",
+    "line": 1015,
+    "handler": "_",
+    "pattern": "نار$"
+  },
+  {
+    "file": "zlzl/plugins/التسليه.py",
+    "line": 1032,
+    "handler": "_",
+    "pattern": "انتحر$"
+  },
+  {
+    "file": "zlzl/plugins/التسليه.py",
+    "line": 1049,
+    "handler": "_",
+    "pattern": "مذاكره$"
+  },
+  {
+    "file": "zlzl/plugins/التسليه.py",
+    "line": 1086,
+    "handler": "cmd",
+    "pattern": "تسليه3"
+  },
+  {
+    "file": "zlzl/plugins/التسليه.py",
+    "line": 1091,
+    "handler": "_",
+    "pattern": "نجمه$"
+  },
+  {
+    "file": "zlzl/plugins/التسليه.py",
+    "line": 1101,
+    "handler": "_",
+    "pattern": "مكعبات$"
+  },
+  {
+    "file": "zlzl/plugins/التسليه.py",
+    "line": 1111,
+    "handler": "_",
+    "pattern": "مطر$"
+  },
+  {
+    "file": "zlzl/plugins/التسليه.py",
+    "line": 1121,
+    "handler": "_",
+    "pattern": "تفريغ ?(.*)"
+  },
+  {
+    "file": "zlzl/plugins/التسليه.py",
+    "line": 1161,
+    "handler": "_",
+    "pattern": "فليم$"
+  },
+  {
+    "file": "zlzl/plugins/التسليه.py",
+    "line": 1184,
+    "handler": "_",
+    "pattern": "طائره$"
+  },
+  {
+    "file": "zlzl/plugins/التسليه.py",
+    "line": 1204,
+    "handler": "_",
+    "pattern": "شرطه$"
+  },
+  {
+    "file": "zlzl/plugins/التسليه.py",
+    "line": 1228,
+    "handler": "_",
+    "pattern": "النضام الشمسي$"
+  },
+  {
+    "file": "zlzl/plugins/التسليه.py",
+    "line": 1248,
+    "handler": "_",
+    "pattern": "قاتل( (.*)|$)"
+  },
+  {
+    "file": "zlzl/plugins/التسليه.py",
+    "line": 1271,
+    "handler": "_",
+    "pattern": "عين$"
+  },
+  {
+    "file": "zlzl/plugins/التسليه.py",
+    "line": 1299,
+    "handler": "_",
+    "pattern": "<dynamic:f'افعى$'>"
+  },
+  {
+    "file": "zlzl/plugins/التسليه.py",
+    "line": 1338,
+    "handler": "_",
+    "pattern": "<dynamic:f'رجل$'>"
+  },
+  {
+    "file": "zlzl/plugins/التسليه.py",
+    "line": 1366,
+    "handler": "_",
+    "pattern": "فايرس$"
+  },
+  {
+    "file": "zlzl/plugins/التسليه.py",
+    "line": 1408,
+    "handler": "_",
+    "pattern": "قطار$"
+  },
+  {
+    "file": "zlzl/plugins/التسليه.py",
+    "line": 1450,
+    "handler": "_",
+    "pattern": "<dynamic:f'نيكول$'>"
+  },
+  {
+    "file": "zlzl/plugins/التسليه.py",
+    "line": 1468,
+    "handler": "_",
+    "pattern": "<dynamic:f'موسيقى$'>"
+  },
+  {
+    "file": "zlzl/plugins/التسليه.py",
+    "line": 1513,
+    "handler": "cmd",
+    "pattern": "تسليه4"
+  },
+  {
+    "file": "zlzl/plugins/التسليه.py",
+    "line": 1518,
+    "handler": "_",
+    "pattern": "رقص$"
+  },
+  {
+    "file": "zlzl/plugins/التسليه.py",
+    "line": 1528,
+    "handler": "_",
+    "pattern": "مستطيل$"
+  },
+  {
+    "file": "zlzl/plugins/التسليه.py",
+    "line": 1539,
+    "handler": "_",
+    "pattern": "مربع$"
+  },
+  {
+    "file": "zlzl/plugins/التسليه.py",
+    "line": 1550,
+    "handler": "_",
+    "pattern": "تردد$"
+  },
+  {
+    "file": "zlzl/plugins/التسليه.py",
+    "line": 1561,
+    "handler": "_",
+    "pattern": "دائره$"
+  },
+  {
+    "file": "zlzl/plugins/التسليه.py",
+    "line": 1572,
+    "handler": "_",
+    "pattern": "قلب$"
+  },
+  {
+    "file": "zlzl/plugins/التسليه.py",
+    "line": 1582,
+    "handler": "_",
+    "pattern": "قرد$"
+  },
+  {
+    "file": "zlzl/plugins/التسليه.py",
+    "line": 1593,
+    "handler": "_",
+    "pattern": "سرفر$"
+  },
+  {
+    "file": "zlzl/plugins/التسليه.py",
+    "line": 1615,
+    "handler": "_",
+    "pattern": "يد$"
+  },
+  {
+    "file": "zlzl/plugins/التسليه.py",
+    "line": 1640,
+    "handler": "_",
+    "pattern": "تنازلي$"
+  },
+  {
+    "file": "zlzl/plugins/التسليه.py",
+    "line": 1664,
+    "handler": "_",
+    "pattern": "قلوب$"
+  },
+  {
+    "file": "zlzl/plugins/التسليه.py",
+    "line": 1712,
+    "handler": "cmd",
+    "pattern": "تسليه5"
+  },
+  {
+    "file": "zlzl/plugins/التسليه.py",
+    "line": 1717,
+    "handler": "kakashi",
+    "pattern": "ميت (.*)"
+  },
+  {
+    "file": "zlzl/plugins/التسليه.py",
+    "line": 1739,
+    "handler": "kakashi",
+    "pattern": "مافيا (.*)"
+  },
+  {
+    "file": "zlzl/plugins/التسليه.py",
+    "line": 2029,
+    "handler": "bluedevilmonster",
+    "pattern": "وحش$"
+  },
+  {
+    "file": "zlzl/plugins/التسليه.py",
+    "line": 2034,
+    "handler": "bluedevilpig",
+    "pattern": "خنزير$"
+  },
+  {
+    "file": "zlzl/plugins/التسليه.py",
+    "line": 2039,
+    "handler": "bluedevilgun",
+    "pattern": "مسدس$"
+  },
+  {
+    "file": "zlzl/plugins/التسليه.py",
+    "line": 2044,
+    "handler": "bluedevildog",
+    "pattern": "كلب$"
+  },
+  {
+    "file": "zlzl/plugins/التسليه.py",
+    "line": 2049,
+    "handler": "bluedevilhello",
+    "pattern": "هلو$"
+  },
+  {
+    "file": "zlzl/plugins/التسليه.py",
+    "line": 2054,
+    "handler": "bluedevilhmf",
+    "pattern": "طائره$"
+  },
+  {
+    "file": "zlzl/plugins/التسليه.py",
+    "line": 2059,
+    "handler": "bluedevilcouple",
+    "pattern": "حبايب$"
+  },
+  {
+    "file": "zlzl/plugins/التسليه.py",
+    "line": 2064,
+    "handler": "bluedevilsupreme",
+    "pattern": "سوبر$"
+  },
+  {
+    "file": "zlzl/plugins/التسليه.py",
+    "line": 2069,
+    "handler": "bluedevilindia",
+    "pattern": "الهند$"
+  },
+  {
+    "file": "zlzl/plugins/التسليه.py",
+    "line": 2074,
+    "handler": "bluedevilwelcome",
+    "pattern": "هلا$"
+  },
+  {
+    "file": "zlzl/plugins/التسليه.py",
+    "line": 2079,
+    "handler": "bluedevilsnake",
+    "pattern": "حيه$"
+  },
+  {
+    "file": "zlzl/plugins/التسليه.py",
+    "line": 2084,
+    "handler": "bluedevilbye",
+    "pattern": "باي$"
+  },
+  {
+    "file": "zlzl/plugins/التسليه.py",
+    "line": 2089,
+    "handler": "bluedevilshitos",
+    "pattern": "خرا$"
+  },
+  {
+    "file": "zlzl/plugins/التسليه.py",
+    "line": 2094,
+    "handler": "bluedevildislike",
+    "pattern": "دس لايك$"
+  },
+  {
+    "file": "zlzl/plugins/التسليه.py",
+    "line": 2122,
+    "handler": "cmd",
+    "pattern": "تسليه6"
+  },
+  {
+    "file": "zlzl/plugins/التسليه.py",
+    "line": 2127,
+    "handler": "_",
+    "pattern": "تهكير$"
+  },
+  {
+    "file": "zlzl/plugins/التسليه.py",
+    "line": 2541,
+    "handler": "_",
+    "pattern": "احبك"
+  },
+  {
+    "file": "zlzl/plugins/التسليه.py",
+    "line": 2559,
+    "handler": "cmd",
+    "pattern": "تسليه7"
+  },
+  {
+    "file": "zlzl/plugins/التسليه.py",
+    "line": 2583,
+    "handler": "waifu",
+    "pattern": "نص(?:\\s|$)([\\s\\S]*)"
+  },
+  {
+    "file": "zlzl/plugins/التسليه.py",
+    "line": 2611,
+    "handler": "sticklet",
+    "pattern": "ستيكر ?(?:(.*?) ?; )?([\\s\\S]*)"
+  },
+  {
+    "file": "zlzl/plugins/التسليه.py",
+    "line": 2669,
+    "handler": "honk",
+    "pattern": "هونك(?:\\s|$)([\\s\\S]*)"
+  },
+  {
+    "file": "zlzl/plugins/التسليه.py",
+    "line": 2693,
+    "handler": "twt",
+    "pattern": "تغريد(?:\\s|$)([\\s\\S]*)"
+  },
+  {
+    "file": "zlzl/plugins/التسليه.py",
+    "line": 2717,
+    "handler": "doge",
+    "pattern": "دوغي(?:\\s|$)([\\s\\S]*)"
+  },
+  {
+    "file": "zlzl/plugins/التسليه.py",
+    "line": 2750,
+    "handler": "glax",
+    "pattern": "غلاكس(|ر)(?:\\s|$)([\\s\\S]*)"
+  },
+  {
+    "file": "zlzl/plugins/التسليه.py",
+    "line": 2786,
+    "handler": "cmd",
+    "pattern": "تسليه8"
+  },
+  {
+    "file": "zlzl/plugins/التسليه.py",
+    "line": 2791,
+    "handler": "_",
+    "pattern": "كرات( (.*)|$)"
+  },
+  {
+    "file": "zlzl/plugins/التسليه.py",
+    "line": 2995,
+    "handler": "_",
+    "pattern": "🖤( (.*)|$)"
+  },
+  {
+    "file": "zlzl/plugins/التسليه.py",
+    "line": 3199,
+    "handler": "_",
+    "pattern": "💙( (.*)|$)"
+  },
+  {
+    "file": "zlzl/plugins/التسليه.py",
+    "line": 3403,
+    "handler": "_",
+    "pattern": "💜( (.*)|$)"
+  },
+  {
+    "file": "zlzl/plugins/التسليه.py",
+    "line": 3607,
+    "handler": "_",
+    "pattern": "❤️( (.*)|$)"
+  },
+  {
+    "file": "zlzl/plugins/التسليه.py",
+    "line": 3812,
+    "handler": "_",
+    "pattern": "❤️( (.*)|$)"
+  },
+  {
+    "file": "zlzl/plugins/التسليه.py",
+    "line": 4017,
+    "handler": "_",
+    "pattern": "❤️( (.*)|$)"
+  },
+  {
+    "file": "zlzl/plugins/التسليه.py",
+    "line": 4239,
+    "handler": "cmd",
+    "pattern": "تسليه9"
+  },
+  {
+    "file": "zlzl/plugins/التفليش.py",
+    "line": 71,
+    "handler": "kickme",
+    "pattern": "اطردني(.*)"
+  },
+  {
+    "file": "zlzl/plugins/التفليش.py",
+    "line": 76,
+    "handler": "banme",
+    "pattern": "مغادره(.*)"
+  },
+  {
+    "file": "zlzl/plugins/التفليش.py",
+    "line": 81,
+    "handler": "_",
+    "pattern": "بوتي$"
+  },
+  {
+    "file": "zlzl/plugins/التفليش.py",
+    "line": 86,
+    "handler": "zze",
+    "pattern": "حالتي ?(.*)"
+  },
+  {
+    "file": "zlzl/plugins/التفليش.py",
+    "line": 118,
+    "handler": "_",
+    "pattern": "تفليش بالطرد$"
+  },
+  {
+    "file": "zlzl/plugins/التفليش.py",
+    "line": 150,
+    "handler": "_",
+    "pattern": "للكل طرد$"
+  },
+  {
+    "file": "zlzl/plugins/التفليش.py",
+    "line": 182,
+    "handler": "_",
+    "pattern": "<dynamic:f'{TFSH}$'>"
+  },
+  {
+    "file": "zlzl/plugins/التفليش.py",
+    "line": 220,
+    "handler": "_",
+    "pattern": "تصفير$"
+  },
+  {
+    "file": "zlzl/plugins/التفليش.py",
+    "line": 250,
+    "handler": "leave_groups",
+    "pattern": "(مغادرة الكروبات|مغادرة المجموعات)"
+  },
+  {
+    "file": "zlzl/plugins/التفليش.py",
+    "line": 284,
+    "handler": "leave_channels",
+    "pattern": "مغادرة القنوات"
+  },
+  {
+    "file": "zlzl/plugins/التفليش.py",
+    "line": 314,
+    "handler": "_",
+    "pattern": "حذف الخاص"
+  },
+  {
+    "file": "zlzl/plugins/التفليش.py",
+    "line": 326,
+    "handler": "_",
+    "pattern": "حذف البوتات"
+  },
+  {
+    "file": "zlzl/plugins/التفليش.py",
+    "line": 338,
+    "handler": "banavot",
+    "pattern": "تفليش بالبوت$"
+  },
+  {
+    "file": "zlzl/plugins/التفليش.py",
+    "line": 363,
+    "handler": "banavot",
+    "pattern": "<dynamic:f'{HDRALL}$'>"
+  },
+  {
+    "file": "zlzl/plugins/التفليش.py",
+    "line": 388,
+    "handler": "banavot",
+    "pattern": "<dynamic:f'{KTMALL}$'>"
+  },
+  {
+    "file": "zlzl/plugins/التفليش.py",
+    "line": 413,
+    "handler": "unbanbot",
+    "pattern": "الغاء التفليش"
+  },
+  {
+    "file": "zlzl/plugins/التفليش.py",
+    "line": 424,
+    "handler": "unbanbot",
+    "pattern": "ايقاف التفليش"
+  },
+  {
+    "file": "zlzl/plugins/التكرار.py",
+    "line": 140,
+    "handler": "spammer",
+    "pattern": "<dynamic:f'{SPAM} ([\\\\s\\\\S]*)'>"
+  },
+  {
+    "file": "zlzl/plugins/التكرار.py",
+    "line": 155,
+    "handler": "spammer",
+    "pattern": "<dynamic:f'{UNSPAM} ?(.*)'>"
+  },
+  {
+    "file": "zlzl/plugins/التكرار.py",
+    "line": 266,
+    "handler": "spammer",
+    "pattern": "كرر ([\\s\\S]*)"
+  },
+  {
+    "file": "zlzl/plugins/التكرار.py",
+    "line": 296,
+    "handler": "stickerpack_spam",
+    "pattern": "تكرار ملصق$"
+  },
+  {
+    "file": "zlzl/plugins/التكرار.py",
+    "line": 370,
+    "handler": "tmeme",
+    "pattern": "وسبام ([\\s\\S]*)"
+  },
+  {
+    "file": "zlzl/plugins/التكرار.py",
+    "line": 404,
+    "handler": "tmeme",
+    "pattern": "سبام ([\\s\\S]*)"
+  },
+  {
+    "file": "zlzl/plugins/التكرار.py",
+    "line": 430,
+    "handler": "react_spam",
+    "pattern": "تعبير مكرر$"
+  },
+  {
+    "file": "zlzl/plugins/التكرار.py",
+    "line": 474,
+    "handler": "stopspamrz",
+    "pattern": "ايقاف التكرار ?(.*)"
+  },
+  {
+    "file": "zlzl/plugins/التكرار.py",
+    "line": 483,
+    "handler": "cmd",
+    "pattern": "التكرار"
+  },
+  {
+    "file": "zlzl/plugins/التنظيف.py",
+    "line": 56,
+    "handler": "delete_it",
+    "pattern": "مسح(\\s*| \\d+)$"
+  },
+  {
+    "file": "zlzl/plugins/التنظيف.py",
+    "line": 103,
+    "handler": "delete_it",
+    "pattern": ".مسح(\\s*| \\d+)$"
+  },
+  {
+    "file": "zlzl/plugins/التنظيف.py",
+    "line": 141,
+    "handler": "purge_from",
+    "pattern": "بداية الحذف"
+  },
+  {
+    "file": "zlzl/plugins/التنظيف.py",
+    "line": 155,
+    "handler": "purge_to",
+    "pattern": "نهاية الحذف"
+  },
+  {
+    "file": "zlzl/plugins/التنظيف.py",
+    "line": 199,
+    "handler": "purgeme",
+    "pattern": "حذف رسائلي"
+  },
+  {
+    "file": "zlzl/plugins/التنظيف.py",
+    "line": 262,
+    "handler": "fastpurger",
+    "pattern": "تنظيف(?:\\s|$)([\\s\\S]*)"
+  },
+  {
+    "file": "zlzl/plugins/التنظيف.py",
+    "line": 507,
+    "handler": "fast_purger",
+    "pattern": "حذف رسائله( الكل)?(?:\\s|$)([\\s\\S]*)"
+  },
+  {
+    "file": "zlzl/plugins/الثيمات.py",
+    "line": 20,
+    "handler": "stsTHMAT",
+    "pattern": "ث1$"
+  },
+  {
+    "file": "zlzl/plugins/الثيمات.py",
+    "line": 30,
+    "handler": "stsTHMAT",
+    "pattern": "ث2$"
+  },
+  {
+    "file": "zlzl/plugins/الثيمات.py",
+    "line": 40,
+    "handler": "stsTHMAT",
+    "pattern": "ث3$"
+  },
+  {
+    "file": "zlzl/plugins/الثيمات.py",
+    "line": 50,
+    "handler": "stsTHMAT",
+    "pattern": "ث4$"
+  },
+  {
+    "file": "zlzl/plugins/الثيمات.py",
+    "line": 62,
+    "handler": "stsTHMAT",
+    "pattern": "ث5$"
+  },
+  {
+    "file": "zlzl/plugins/الثيمات.py",
+    "line": 74,
+    "handler": "stsTHMAT",
+    "pattern": "ث6$"
+  },
+  {
+    "file": "zlzl/plugins/الثيمات.py",
+    "line": 86,
+    "handler": "stsTHMAT",
+    "pattern": "ث7$"
+  },
+  {
+    "file": "zlzl/plugins/الثيمات.py",
+    "line": 98,
+    "handler": "stsTHMAT",
+    "pattern": "ث8$"
+  },
+  {
+    "file": "zlzl/plugins/الثيمات.py",
+    "line": 109,
+    "handler": "stsTHMAT",
+    "pattern": "ث9$"
+  },
+  {
+    "file": "zlzl/plugins/الثيمات.py",
+    "line": 120,
+    "handler": "stsTHMAT",
+    "pattern": "ث10$"
+  },
+  {
+    "file": "zlzl/plugins/الثيمات.py",
+    "line": 131,
+    "handler": "stsTHMAT",
+    "pattern": "ث11$"
+  },
+  {
+    "file": "zlzl/plugins/الثيمات.py",
+    "line": 142,
+    "handler": "stsTHMAT",
+    "pattern": "ث12$"
+  },
+  {
+    "file": "zlzl/plugins/الثيمات.py",
+    "line": 155,
+    "handler": "stsfanan",
+    "pattern": "ن1$"
+  },
+  {
+    "file": "zlzl/plugins/الثيمات.py",
+    "line": 168,
+    "handler": "stsfanan",
+    "pattern": "ن2$"
+  },
+  {
+    "file": "zlzl/plugins/الثيمات.py",
+    "line": 181,
+    "handler": "stsfanan",
+    "pattern": "ن3$"
+  },
+  {
+    "file": "zlzl/plugins/الثيمات.py",
+    "line": 194,
+    "handler": "stsfanan",
+    "pattern": "ن4$"
+  },
+  {
+    "file": "zlzl/plugins/الثيمات.py",
+    "line": 209,
+    "handler": "stsfanan",
+    "pattern": "ن5$"
+  },
+  {
+    "file": "zlzl/plugins/الثيمات.py",
+    "line": 224,
+    "handler": "stsfanan",
+    "pattern": "ن6$"
+  },
+  {
+    "file": "zlzl/plugins/الثيمات.py",
+    "line": 239,
+    "handler": "stsfanan",
+    "pattern": "ن7$"
+  },
+  {
+    "file": "zlzl/plugins/الثيمات.py",
+    "line": 254,
+    "handler": "stsfanan",
+    "pattern": "ن8$"
+  },
+  {
+    "file": "zlzl/plugins/الثيمات.py",
+    "line": 268,
+    "handler": "stsfanan",
+    "pattern": "ن9$"
+  },
+  {
+    "file": "zlzl/plugins/الثيمات.py",
+    "line": 282,
+    "handler": "stsfanan",
+    "pattern": "ن10$"
+  },
+  {
+    "file": "zlzl/plugins/الثيمات.py",
+    "line": 296,
+    "handler": "stsfanan",
+    "pattern": "ن11$"
+  },
+  {
+    "file": "zlzl/plugins/الثيمات.py",
+    "line": 310,
+    "handler": "stsfanan",
+    "pattern": "ن12$"
+  },
+  {
+    "file": "zlzl/plugins/الثيمات.py",
+    "line": 325,
+    "handler": "zed",
+    "pattern": "ثيمات"
+  },
+  {
+    "file": "zlzl/plugins/الثيمات.py",
+    "line": 329,
+    "handler": "zed",
+    "pattern": "الثيمات"
+  },
+  {
+    "file": "zlzl/plugins/الحاسبة.py",
+    "line": 18,
+    "handler": "calculator",
+    "pattern": "احسب ([\\s\\S]*)"
+  },
+  {
+    "file": "zlzl/plugins/الردود والترحيب.py",
+    "line": 82,
+    "handler": "cmd",
+    "pattern": "الردود"
+  },
+  {
+    "file": "zlzl/plugins/الردود والترحيب.py",
+    "line": 86,
+    "handler": "cmd",
+    "pattern": "الترحيب"
+  },
+  {
+    "file": "zlzl/plugins/الردود والترحيب.py",
+    "line": 91,
+    "handler": "filter_incoming_handler",
+    "pattern": "<missing-pattern>"
+  },
+  {
+    "file": "zlzl/plugins/الردود والترحيب.py",
+    "line": 171,
+    "handler": "add_new_filter",
+    "pattern": "رد (.*)"
+  },
+  {
+    "file": "zlzl/plugins/الردود والترحيب.py",
+    "line": 220,
+    "handler": "on_snip_list",
+    "pattern": "ردود الكروب$"
+  },
+  {
+    "file": "zlzl/plugins/الردود والترحيب.py",
+    "line": 244,
+    "handler": "remove_a_filter",
+    "pattern": "حذف رد ([\\s\\S]*)"
+  },
+  {
+    "file": "zlzl/plugins/الردود والترحيب.py",
+    "line": 261,
+    "handler": "on_all_snip_delete",
+    "pattern": "حذف الردود$"
+  },
+  {
+    "file": "zlzl/plugins/الردود والترحيب.py",
+    "line": 373,
+    "handler": "save_welcome",
+    "pattern": "ترحيب(?:\\s|$)([\\s\\S]*)"
+  },
+  {
+    "file": "zlzl/plugins/الردود والترحيب.py",
+    "line": 415,
+    "handler": "del_welcome",
+    "pattern": "حذف الترحيب$"
+  },
+  {
+    "file": "zlzl/plugins/الردود والترحيب.py",
+    "line": 431,
+    "handler": "show_welcome",
+    "pattern": "الترحيبات$"
+  },
+  {
+    "file": "zlzl/plugins/الردود والترحيب.py",
+    "line": 460,
+    "handler": "del_welcome",
+    "pattern": "cleanwelcome (on|off)$"
+  },
+  {
+    "file": "zlzl/plugins/الردود والترحيب.py",
+    "line": 575,
+    "handler": "save_welcome",
+    "pattern": "رحب(?:\\s|$)([\\s\\S]*)"
+  },
+  {
+    "file": "zlzl/plugins/الردود والترحيب.py",
+    "line": 619,
+    "handler": "del_welcome",
+    "pattern": "حذف رحب$"
+  },
+  {
+    "file": "zlzl/plugins/الردود والترحيب.py",
+    "line": 635,
+    "handler": "show_welcome",
+    "pattern": "قائمه رحب$"
+  },
+  {
+    "file": "zlzl/plugins/الزخرفه.py",
+    "line": 22,
+    "handler": "zilzal",
+    "pattern": "زخرفة ?(.*)"
+  },
+  {
+    "file": "zlzl/plugins/الزخرفه.py",
+    "line": 41,
+    "handler": "zelzal",
+    "pattern": "زغرفه ?(.*)"
+  },
+  {
+    "file": "zlzl/plugins/السيرفر.py",
+    "line": 51,
+    "handler": "variable",
+    "pattern": "(ضع|جلب|حذف) الفار ([\\s\\S]*)"
+  },
+  {
+    "file": "zlzl/plugins/السيرفر.py",
+    "line": 140,
+    "handler": "_",
+    "pattern": "(ري|كلين) لود$"
+  },
+  {
+    "file": "zlzl/plugins/الصلاة.py",
+    "line": 23,
+    "handler": "get_adzan",
+    "pattern": "صلاة ([\\s\\S]*)"
+  },
+  {
+    "file": "zlzl/plugins/الضغط.py",
+    "line": 153,
+    "handler": "ffmpeg_compress",
+    "pattern": "(|ا)ضغط(?:\\s|$)([\\s\\S]*)"
+  },
+  {
+    "file": "zlzl/plugins/الضغط.py",
+    "line": 271,
+    "handler": "ff_mpeg_trim_cmd",
+    "pattern": "ffmpegsave(?:\\s|$)([\\s\\S]*)"
+  },
+  {
+    "file": "zlzl/plugins/الضغط.py",
+    "line": 330,
+    "handler": "ff_mpeg_trim_cmd",
+    "pattern": "vtrim(?:\\s|$)([\\s\\S]*)"
+  },
+  {
+    "file": "zlzl/plugins/الضغط.py",
+    "line": 418,
+    "handler": "ff_mpeg_trim_cmd",
+    "pattern": "atrim(?:\\s|$)([\\s\\S]*)"
+  },
+  {
+    "file": "zlzl/plugins/الضغط.py",
+    "line": 479,
+    "handler": "ff_mpeg_trim_cmd",
+    "pattern": "ffmpegclear$"
+  },
+  {
+    "file": "zlzl/plugins/الفارات.py",
+    "line": 154,
+    "handler": "variable",
+    "pattern": "اضف فار (.*)"
+  },
+  {
+    "file": "zlzl/plugins/الفارات.py",
+    "line": 618,
+    "handler": "variable",
+    "pattern": "حذف فار(?:\\s|$)([\\s\\S]*)"
+  },
+  {
+    "file": "zlzl/plugins/الفارات.py",
+    "line": 949,
+    "handler": "custom_zed",
+    "pattern": "جلب فار(?:\\s|$)([\\s\\S]*)"
+  },
+  {
+    "file": "zlzl/plugins/الفارات.py",
+    "line": 1369,
+    "handler": "variable",
+    "pattern": "وقت(?:\\s|$)([\\s\\S]*)"
+  },
+  {
+    "file": "zlzl/plugins/الفارات.py",
+    "line": 1561,
+    "handler": "cmd",
+    "pattern": "اوامر الفارات"
+  },
+  {
+    "file": "zlzl/plugins/الفارات.py",
+    "line": 1565,
+    "handler": "cmd",
+    "pattern": "الفارات"
+  },
+  {
+    "file": "zlzl/plugins/الفارات.py",
+    "line": 1569,
+    "handler": "cmd",
+    "pattern": "الوقت"
+  },
+  {
+    "file": "zlzl/plugins/الفحص.py",
+    "line": 29,
+    "handler": "zed_alive",
+    "pattern": "<dynamic:f'{STATS}$'>"
+  },
+  {
+    "file": "zlzl/plugins/الكاشف.py",
+    "line": 25,
+    "handler": "_",
+    "pattern": "اكشف(?: |$)([\\s\\S]*)"
+  },
+  {
+    "file": "zlzl/plugins/الكاشف.py",
+    "line": 61,
+    "handler": "cmd",
+    "pattern": "الكاشف"
+  },
+  {
+    "file": "zlzl/plugins/الكتابة.py",
+    "line": 5,
+    "handler": "_",
+    "pattern": "غامق(?: |$)(.*)"
+  },
+  {
+    "file": "zlzl/plugins/الكتابة.py",
+    "line": 21,
+    "handler": "_",
+    "pattern": "نسخ(?: |$)(.*)"
+  },
+  {
+    "file": "zlzl/plugins/الكتابة.py",
+    "line": 37,
+    "handler": "_",
+    "pattern": "مائل(?: |$)(.*)"
+  },
+  {
+    "file": "zlzl/plugins/المجموعه.py",
+    "line": 183,
+    "handler": "stats",
+    "pattern": "stat$"
+  },
+  {
+    "file": "zlzl/plugins/المجموعه.py",
+    "line": 250,
+    "handler": "stats",
+    "pattern": "قنواتي (الكل|ادمن|مالك)$"
+  },
+  {
+    "file": "zlzl/plugins/المجموعه.py",
+    "line": 295,
+    "handler": "stats",
+    "pattern": "كروباتي (الكل|ادمن|مالك)$"
+  },
+  {
+    "file": "zlzl/plugins/المجموعه.py",
+    "line": 390,
+    "handler": "scrapmem",
+    "pattern": "تجميع الاعضاء$"
+  },
+  {
+    "file": "zlzl/plugins/المجموعه.py",
+    "line": 403,
+    "handler": "admem",
+    "pattern": "اضف الاعضاء$"
+  },
+  {
+    "file": "zlzl/plugins/المجموعه.py",
+    "line": 453,
+    "handler": "_",
+    "pattern": "المشرفين(?:\\s|$)([\\s\\S]*)"
+  },
+  {
+    "file": "zlzl/plugins/المجموعه.py",
+    "line": 507,
+    "handler": "get_users",
+    "pattern": "الاعضاء(?:\\s|$)([\\s\\S]*)"
+  },
+  {
+    "file": "zlzl/plugins/المجموعه.py",
+    "line": 555,
+    "handler": "info",
+    "pattern": "المعلومات(?:\\s|$)([\\s\\S]*)"
+  },
+  {
+    "file": "zlzl/plugins/المجموعه.py",
+    "line": 837,
+    "handler": "_",
+    "pattern": "اكسباير ?([\\s\\S]*)"
+  },
+  {
+    "file": "zlzl/plugins/المجموعه.py",
+    "line": 980,
+    "handler": "_",
+    "pattern": "رفع الحظر ?(.*)"
+  },
+  {
+    "file": "zlzl/plugins/المجموعه.py",
+    "line": 1006,
+    "handler": "_",
+    "pattern": "مسح المحظورين(.*)"
+  },
+  {
+    "file": "zlzl/plugins/المجموعه.py",
+    "line": 1037,
+    "handler": "rm_deletedacc",
+    "pattern": "المحذوفين ?([\\s\\S]*)"
+  },
+  {
+    "file": "zlzl/plugins/المجموعه.py",
+    "line": 1085,
+    "handler": "count",
+    "pattern": "احصائياتي$"
+  },
+  {
+    "file": "zlzl/plugins/المجموعه.py",
+    "line": 1124,
+    "handler": "zed",
+    "pattern": "الرابط ?(.*)"
+  },
+  {
+    "file": "zlzl/plugins/المجموعه.py",
+    "line": 1137,
+    "handler": "zed",
+    "pattern": "رسائلي$"
+  },
+  {
+    "file": "zlzl/plugins/المجموعه.py",
+    "line": 1144,
+    "handler": "zed",
+    "pattern": "رسائله ?(.*)"
+  },
+  {
+    "file": "zlzl/plugins/المجموعه.py",
+    "line": 1158,
+    "handler": "zed",
+    "pattern": "(الرسائل|رسائل) ?(.*)"
+  },
+  {
+    "file": "zlzl/plugins/المجموعه.py",
+    "line": 1172,
+    "handler": "main",
+    "pattern": "الحاظرهم$"
+  },
+  {
+    "file": "zlzl/plugins/المجموعه.py",
+    "line": 1186,
+    "handler": "_",
+    "pattern": "قيد (.*)"
+  },
+  {
+    "file": "zlzl/plugins/المجموعه.py",
+    "line": 1198,
+    "handler": "_",
+    "pattern": "احذف (.*)"
+  },
+  {
+    "file": "zlzl/plugins/المطور.py",
+    "line": 82,
+    "handler": "chat_blacklist",
+    "pattern": "وضع المطور (تفعيل|تعطيل)$"
+  },
+  {
+    "file": "zlzl/plugins/المطور.py",
+    "line": 106,
+    "handler": "add_sudo_user",
+    "pattern": "رفع مطور(?:\\s|$)([\\s\\S]*)"
+  },
+  {
+    "file": "zlzl/plugins/المطور.py",
+    "line": 153,
+    "handler": "_",
+    "pattern": "تنزيل مطور(?:\\s|$)([\\s\\S]*)"
+  },
+  {
+    "file": "zlzl/plugins/المطور.py",
+    "line": 184,
+    "handler": "_",
+    "pattern": "المطورين$"
+  },
+  {
+    "file": "zlzl/plugins/المطور.py",
+    "line": 203,
+    "handler": "_",
+    "pattern": "حذف_المطورين"
+  },
+  {
+    "file": "zlzl/plugins/المطور.py",
+    "line": 211,
+    "handler": "_",
+    "pattern": "حذف المطورين"
+  },
+  {
+    "file": "zlzl/plugins/المطور.py",
+    "line": 219,
+    "handler": "_",
+    "pattern": "مسح المطورين"
+  },
+  {
+    "file": "zlzl/plugins/المطور.py",
+    "line": 227,
+    "handler": "_",
+    "pattern": "تنزيل المطورين"
+  },
+  {
+    "file": "zlzl/plugins/المطور.py",
+    "line": 257,
+    "handler": "_",
+    "pattern": "تحكم(s)?(?:\\s|$)([\\s\\S]*)"
+  },
+  {
+    "file": "zlzl/plugins/المطور.py",
+    "line": 349,
+    "handler": "_",
+    "pattern": "ايقاف تحكم(s)?(?:\\s|$)([\\s\\S]*)?"
+  },
+  {
+    "file": "zlzl/plugins/المطور.py",
+    "line": 433,
+    "handler": "_",
+    "pattern": "التحكم( المعطل)?$"
+  },
+  {
+    "file": "zlzl/plugins/المطور.py",
+    "line": 492,
+    "handler": "cmd",
+    "pattern": "المساعد"
+  },
+  {
+    "file": "zlzl/plugins/الملصقات.py",
+    "line": 291,
+    "handler": "kang",
+    "pattern": "ملصق(?:\\s|$)([\\s\\S]*)"
+  },
+  {
+    "file": "zlzl/plugins/الملصقات.py",
+    "line": 481,
+    "handler": "pack_kang",
+    "pattern": "حزمه(?:\\s|$)([\\s\\S]*)"
+  },
+  {
+    "file": "zlzl/plugins/الملصقات.py",
+    "line": 673,
+    "handler": "pussycat",
+    "pattern": "متحرك$"
+  },
+  {
+    "file": "zlzl/plugins/الملصقات.py",
+    "line": 751,
+    "handler": "pic2packcmd",
+    "pattern": "حزمة(?:\\s|$)([\\s\\S]*)"
+  },
+  {
+    "file": "zlzl/plugins/الملصقات.py",
+    "line": 852,
+    "handler": "get_pack_info",
+    "pattern": "معلومات الملصق$"
+  },
+  {
+    "file": "zlzl/plugins/الملصقات.py",
+    "line": 901,
+    "handler": "cb_sticker",
+    "pattern": "ملصقات ?([\\s\\S]*)"
+  },
+  {
+    "file": "zlzl/plugins/الملصقات.py",
+    "line": 926,
+    "handler": "zelzal_gif",
+    "pattern": "حذف_ملصق$"
+  },
+  {
+    "file": "zlzl/plugins/الملكيه.py",
+    "line": 24,
+    "handler": "_",
+    "pattern": "تحويل ملكية ([\\s\\S]*)"
+  },
+  {
+    "file": "zlzl/plugins/المنع والتحذير.py",
+    "line": 16,
+    "handler": "on_new_message",
+    "pattern": "<missing-pattern>"
+  },
+  {
+    "file": "zlzl/plugins/المنع والتحذير.py",
+    "line": 43,
+    "handler": "_",
+    "pattern": "منع(?:\\s|$)([\\s\\S]*)"
+  },
+  {
+    "file": "zlzl/plugins/المنع والتحذير.py",
+    "line": 61,
+    "handler": "_",
+    "pattern": "الغاء منع(?:\\s|$)([\\s\\S]*)"
+  },
+  {
+    "file": "zlzl/plugins/المنع والتحذير.py",
+    "line": 79,
+    "handler": "_",
+    "pattern": "قائمة المنع$"
+  },
+  {
+    "file": "zlzl/plugins/المنع والتحذير.py",
+    "line": 94,
+    "handler": "_",
+    "pattern": "قائمه المنع$"
+  },
+  {
+    "file": "zlzl/plugins/المنع والتحذير.py",
+    "line": 109,
+    "handler": "_",
+    "pattern": "تحذير(?:\\s|$)([\\s\\S]*)"
+  },
+  {
+    "file": "zlzl/plugins/المنع والتحذير.py",
+    "line": 142,
+    "handler": "_",
+    "pattern": "التحذيرات"
+  },
+  {
+    "file": "zlzl/plugins/المنع والتحذير.py",
+    "line": 170,
+    "handler": "_",
+    "pattern": "حذف التحذيرات(?: |$)(.*)"
+  },
+  {
+    "file": "zlzl/plugins/النظام.py",
+    "line": 56,
+    "handler": "psu",
+    "pattern": "النظام$"
+  },
+  {
+    "file": "zlzl/plugins/النظام.py",
+    "line": 112,
+    "handler": "cpu",
+    "pattern": "cpu$"
+  },
+  {
+    "file": "zlzl/plugins/النظام.py",
+    "line": 129,
+    "handler": "sysdetails",
+    "pattern": "نظامي$"
+  },
+  {
+    "file": "zlzl/plugins/النظام.py",
+    "line": 155,
+    "handler": "_",
+    "pattern": "الانترنت(?:\\s|$)([\\s\\S]*)"
+  },
+  {
+    "file": "zlzl/plugins/النظام.py",
+    "line": 247,
+    "handler": "_",
+    "pattern": "(اعاده تشغيل|اعادة تشغيل|اعاده التشغيل|اعادة التشغيل|تحديث)$"
+  },
+  {
+    "file": "zlzl/plugins/النظام.py",
+    "line": 312,
+    "handler": "_",
+    "pattern": "ايقاف البوت$"
+  },
+  {
+    "file": "zlzl/plugins/النظام.py",
+    "line": 332,
+    "handler": "_",
+    "pattern": "نوم( [0-9]+)?$"
+  },
+  {
+    "file": "zlzl/plugins/النظام.py",
+    "line": 358,
+    "handler": "set_pmlog",
+    "pattern": "الاشعارات (تفعيل|تعطيل)$"
+  },
+  {
+    "file": "zlzl/plugins/النظام.py",
+    "line": 376,
+    "handler": "librarz",
+    "pattern": "المكاتب$"
+  },
+  {
+    "file": "zlzl/plugins/النظام.py",
+    "line": 389,
+    "handler": "pipcheck",
+    "pattern": "مكتبة (.*)"
+  },
+  {
+    "file": "zlzl/plugins/النظام.py",
+    "line": 434,
+    "handler": "_",
+    "pattern": "فرمته(?: |$)(.*)"
+  },
+  {
+    "file": "zlzl/plugins/النظام.py",
+    "line": 442,
+    "handler": "_",
+    "pattern": "تاريخ$"
+  },
+  {
+    "file": "zlzl/plugins/النظام.py",
+    "line": 509,
+    "handler": "_",
+    "pattern": "السرعه$"
+  },
+  {
+    "file": "zlzl/plugins/النظام.py",
+    "line": 545,
+    "handler": "zeddd",
+    "pattern": "تاريخ التنصيب$"
+  },
+  {
+    "file": "zlzl/plugins/النظام.py",
+    "line": 576,
+    "handler": "gps",
+    "pattern": "الموقع ([\\s\\S]*)"
+  },
+  {
+    "file": "zlzl/plugins/ايميل وهمي.py",
+    "line": 33,
+    "handler": "zelzal_gpt",
+    "pattern": "بريد$"
+  },
+  {
+    "file": "zlzl/plugins/ايميل وهمي.py",
+    "line": 65,
+    "handler": "zelzal_gpt",
+    "pattern": "الوارد$"
+  },
+  {
+    "file": "zlzl/plugins/بحث صور.py",
+    "line": 28,
+    "handler": "_",
+    "pattern": "صور (.*)"
+  },
+  {
+    "file": "zlzl/plugins/بحث صور.py",
+    "line": 94,
+    "handler": "_",
+    "pattern": "خلفيات (.*)"
+  },
+  {
+    "file": "zlzl/plugins/بلاغات.py",
+    "line": 83,
+    "handler": "spammer",
+    "pattern": "بلاغ ([\\s\\S]*)"
+  },
+  {
+    "file": "zlzl/plugins/بلاغات.py",
+    "line": 105,
+    "handler": "spammer",
+    "pattern": "<dynamic:f'{UNSPAM} ?(.*)'>"
+  },
+  {
+    "file": "zlzl/plugins/بلاي.py",
+    "line": 46,
+    "handler": "zedrepo",
+    "pattern": "بلاي$"
+  },
+  {
+    "file": "zlzl/plugins/تجربة.py",
+    "line": 12,
+    "handler": "hi",
+    "pattern": "امر التجربه"
+  },
+  {
+    "file": "zlzl/plugins/تجربة.py",
+    "line": 21,
+    "handler": "_",
+    "pattern": "تجربه(?:\\s|$)([\\s\\S]*)"
+  },
+  {
+    "file": "zlzl/plugins/تحديث البوت.py",
+    "line": 159,
+    "handler": "upstream",
+    "pattern": "تحديث البوت$"
+  },
+  {
+    "file": "zlzl/plugins/تحويل الصيغ.py",
+    "line": 54,
+    "handler": "_",
+    "pattern": "لصوره$"
+  },
+  {
+    "file": "zlzl/plugins/تحويل الصيغ.py",
+    "line": 88,
+    "handler": "_",
+    "pattern": "لملصق$"
+  },
+  {
+    "file": "zlzl/plugins/تحويل الصيغ.py",
+    "line": 129,
+    "handler": "get",
+    "pattern": "ttf ?(.*)"
+  },
+  {
+    "file": "zlzl/plugins/تحويل الصيغ.py",
+    "line": 146,
+    "handler": "on_file_to_photo",
+    "pattern": "ftoi$"
+  },
+  {
+    "file": "zlzl/plugins/تحويل الصيغ.py",
+    "line": 179,
+    "handler": "_",
+    "pattern": "حول ?(.*)"
+  },
+  {
+    "file": "zlzl/plugins/تحويل الصيغ.py",
+    "line": 293,
+    "handler": "pic_gifcmd",
+    "pattern": "spin(?: |$)((-)?(s)?)$"
+  },
+  {
+    "file": "zlzl/plugins/تحويل الصيغ.py",
+    "line": 375,
+    "handler": "video_catfile",
+    "pattern": "دائري ?((-)?s)?$"
+  },
+  {
+    "file": "zlzl/plugins/تحويل الصيغ.py",
+    "line": 522,
+    "handler": "get",
+    "pattern": "طباعه (.*)"
+  },
+  {
+    "file": "zlzl/plugins/تحويل الصيغ.py",
+    "line": 539,
+    "handler": "on_file_to_photo",
+    "pattern": "ftoi$"
+  },
+  {
+    "file": "zlzl/plugins/تحويل الصيغ.py",
+    "line": 572,
+    "handler": "_",
+    "pattern": "ملصق متحرك(?: |$)(.*)"
+  },
+  {
+    "file": "zlzl/plugins/تحويل الصيغ.py",
+    "line": 626,
+    "handler": "pic_gifcmd",
+    "pattern": "ممتحركة(?: |$)((-)?(r|l|u|d|s|i)?)$"
+  },
+  {
+    "file": "zlzl/plugins/تحويل الصيغ.py",
+    "line": 687,
+    "handler": "_",
+    "pattern": "متحرك ?([0-9.]+)?$"
+  },
+  {
+    "file": "zlzl/plugins/ترجمه صوتيه.py",
+    "line": 33,
+    "handler": "_",
+    "pattern": "صوت جوجل(?:\\s|$)([\\s\\S]*)"
+  },
+  {
+    "file": "zlzl/plugins/تسمية الميديا.py",
+    "line": 20,
+    "handler": "_",
+    "pattern": "rename (.*)"
+  },
+  {
+    "file": "zlzl/plugins/تسمية الميديا.py",
+    "line": 59,
+    "handler": "_",
+    "pattern": "إسم (.*)"
+  },
+  {
+    "file": "zlzl/plugins/تسمية الميديا.py",
+    "line": 122,
+    "handler": "_",
+    "pattern": "اسم (.*)"
+  },
+  {
+    "file": "zlzl/plugins/تلكراف.py",
+    "line": 54,
+    "handler": "_",
+    "pattern": "(ت(ل)?ك(راف)?) ?(m|t|ميديا|نص)(?:\\s|$)([\\s\\S]*)"
+  },
+  {
+    "file": "zlzl/plugins/تلكراف.py",
+    "line": 139,
+    "handler": "ctg",
+    "pattern": "ctg(?: |$)([\\s\\S]*)"
+  },
+  {
+    "file": "zlzl/plugins/ثيمات_بديل.py",
+    "line": 8,
+    "handler": "unavailable_theme_command",
+    "pattern": "(?:ث|ن)(?:[1-9]|1[0-2])$"
+  },
+  {
+    "file": "zlzl/plugins/جوجل.py",
+    "line": 88,
+    "handler": "gsearch",
+    "pattern": "جو ([\\s\\S]*)"
+  },
+  {
+    "file": "zlzl/plugins/جوجل.py",
+    "line": 165,
+    "handler": "_",
+    "pattern": "مصادر ([\\s\\S]*)"
+  },
+  {
+    "file": "zlzl/plugins/جوجل.py",
+    "line": 177,
+    "handler": "grs",
+    "pattern": "مصادر$"
+  },
+  {
+    "file": "zlzl/plugins/جوجل.py",
+    "line": 258,
+    "handler": "reverse",
+    "pattern": "تحليل(?:\\s|$)([\\s\\S]*)"
+  },
+  {
+    "file": "zlzl/plugins/جوجل.py",
+    "line": 332,
+    "handler": "google_search",
+    "pattern": "جوجل(?:\\s|$)([\\s\\S]*)"
+  },
+  {
+    "file": "zlzl/plugins/حساب العمر.py",
+    "line": 10,
+    "handler": "_",
+    "pattern": "حساب العمر(?:\\s|$)([\\s\\S]*)"
+  },
+  {
+    "file": "zlzl/plugins/حفظ الذاتيه.py",
+    "line": 37,
+    "handler": "cmd",
+    "pattern": "الذاتيه"
+  },
+  {
+    "file": "zlzl/plugins/حفظ الذاتيه.py",
+    "line": 41,
+    "handler": "oho",
+    "pattern": "<dynamic:f'{POSC}(?: |$)(.*)'>"
+  },
+  {
+    "file": "zlzl/plugins/حفظ الذاتيه.py",
+    "line": 50,
+    "handler": "start_datea",
+    "pattern": "(تفعيل الذاتيه|تفعيل الذاتية)"
+  },
+  {
+    "file": "zlzl/plugins/حفظ الذاتيه.py",
+    "line": 58,
+    "handler": "stop_datea",
+    "pattern": "(تعطيل الذاتيه|تعطيل الذاتية)"
+  },
+  {
+    "file": "zlzl/plugins/حفظ الذاتيه.py",
+    "line": 80,
+    "handler": "selfdestruct",
+    "pattern": "اعلان (\\d*) ([\\s\\S]*)"
+  },
+  {
+    "file": "zlzl/plugins/حفظ الذاتيه.py",
+    "line": 92,
+    "handler": "selfdestruct",
+    "pattern": "إعلان (\\d*) ([\\s\\S]*)"
+  },
+  {
+    "file": "zlzl/plugins/حيوان.py",
+    "line": 205,
+    "handler": "who",
+    "pattern": "حيوان(?: |$)(.*)"
+  },
+  {
+    "file": "zlzl/plugins/رساله.py",
+    "line": 30,
+    "handler": "writer",
+    "pattern": "رساله ?(.*)"
+  },
+  {
+    "file": "zlzl/plugins/رساله.py",
+    "line": 56,
+    "handler": "kek",
+    "pattern": "^\\:/$"
+  },
+  {
+    "file": "zlzl/plugins/رساله.py",
+    "line": 66,
+    "handler": "lol",
+    "pattern": "^\\-_-$"
+  },
+  {
+    "file": "zlzl/plugins/رساله.py",
+    "line": 76,
+    "handler": "fun",
+    "pattern": "^\\;_;$"
+  },
+  {
+    "file": "zlzl/plugins/رساله.py",
+    "line": 86,
+    "handler": "Oof",
+    "pattern": "oof$"
+  },
+  {
+    "file": "zlzl/plugins/رساله.py",
+    "line": 96,
+    "handler": "typewriter",
+    "pattern": "اكتب (.*)"
+  },
+  {
+    "file": "zlzl/plugins/رساله.py",
+    "line": 113,
+    "handler": "_",
+    "pattern": "كرر (\\d*) (.*)"
+  },
+  {
+    "file": "zlzl/plugins/رساله.py",
+    "line": 125,
+    "handler": "meme",
+    "pattern": "<dynamic:f'ميمي'>"
+  },
+  {
+    "file": "zlzl/plugins/رساله.py",
+    "line": 191,
+    "handler": "give",
+    "pattern": "<dynamic:f'جف'>"
+  },
+  {
+    "file": "zlzl/plugins/ريمكسات.py",
+    "line": 27,
+    "handler": "remaxzedthon",
+    "pattern": "ريماكس ([\\s\\S]*)"
+  },
+  {
+    "file": "zlzl/plugins/ريمكسات.py",
+    "line": 52,
+    "handler": "zed",
+    "pattern": "ريمكس ([\\s\\S]*)"
+  },
+  {
+    "file": "zlzl/plugins/زلزال.py",
+    "line": 32,
+    "handler": "_",
+    "pattern": "اغنيه(?: |$)(.*)"
+  },
+  {
+    "file": "zlzl/plugins/زلزال.py",
+    "line": 90,
+    "handler": "_",
+    "pattern": "تطبيق(?: |$)(.*)"
+  },
+  {
+    "file": "zlzl/plugins/زلزال.py",
+    "line": 161,
+    "handler": "linkapk",
+    "pattern": "رابط(?:\\s|$)([\\s\\S]*)"
+  },
+  {
+    "file": "zlzl/plugins/زلزال.py",
+    "line": 186,
+    "handler": "zed",
+    "pattern": "فلم ([\\s\\S]*)"
+  },
+  {
+    "file": "zlzl/plugins/سكانر.py",
+    "line": 117,
+    "handler": "get_ocr_languages",
+    "pattern": "اللغات"
+  },
+  {
+    "file": "zlzl/plugins/سكانر.py",
+    "line": 151,
+    "handler": "parse_ocr_space_api",
+    "pattern": "النص (.*)"
+  },
+  {
+    "file": "zlzl/plugins/سكانر.py",
+    "line": 191,
+    "handler": "ocr",
+    "pattern": "(|ا)سكانر(?:\\s|$)([\\s\\S]*)"
+  },
+  {
+    "file": "zlzl/plugins/سكانر.py",
+    "line": 253,
+    "handler": "ocr",
+    "pattern": "اسكانر"
+  },
+  {
+    "file": "zlzl/plugins/سكرين.py",
+    "line": 33,
+    "handler": "_",
+    "pattern": "(سكرين|ss) ([\\s\\S]*)"
+  },
+  {
+    "file": "zlzl/plugins/سكرين.py",
+    "line": 116,
+    "handler": "_",
+    "pattern": "لقطه ([\\s\\S]*)"
+  },
+  {
+    "file": "zlzl/plugins/عرض.py",
+    "line": 20,
+    "handler": "_",
+    "pattern": "عرض$"
+  },
+  {
+    "file": "zlzl/plugins/فلاتر.py",
+    "line": 72,
+    "handler": "maccmd",
+    "pattern": "فرام(ف|م)?$"
+  },
+  {
+    "file": "zlzl/plugins/فلاتر.py",
+    "line": 159,
+    "handler": "memes",
+    "pattern": "(حقوق|اطبع)(?:\\s|$)([\\s\\S]*)"
+  },
+  {
+    "file": "zlzl/plugins/فلاتر.py",
+    "line": 233,
+    "handler": "lang",
+    "pattern": "الخطوط(?:\\s|$)([\\s\\S]*)"
+  },
+  {
+    "file": "zlzl/plugins/فلاتر.py",
+    "line": 252,
+    "handler": "lang",
+    "pattern": "خطوط(?:\\s|$)([\\s\\S]*)"
+  },
+  {
+    "file": "zlzl/plugins/فلاتر.py",
+    "line": 285,
+    "handler": "memes",
+    "pattern": "رقميه(?:\\s|$)([\\s\\S]*)"
+  },
+  {
+    "file": "zlzl/plugins/فلاتر.py",
+    "line": 335,
+    "handler": "memes",
+    "pattern": "عكس الالوان$"
+  },
+  {
+    "file": "zlzl/plugins/فلاتر.py",
+    "line": 380,
+    "handler": "memes",
+    "pattern": "سولار$"
+  },
+  {
+    "file": "zlzl/plugins/فلاتر.py",
+    "line": 425,
+    "handler": "memes",
+    "pattern": "ميرور$"
+  },
+  {
+    "file": "zlzl/plugins/فلاتر.py",
+    "line": 470,
+    "handler": "memes",
+    "pattern": "قلب الصوره$"
+  },
+  {
+    "file": "zlzl/plugins/فلاتر.py",
+    "line": 515,
+    "handler": "memes",
+    "pattern": "فلتر رصاصي$"
+  },
+  {
+    "file": "zlzl/plugins/فلاتر.py",
+    "line": 560,
+    "handler": "memes",
+    "pattern": "زوم ?([\\s\\S]*)"
+  },
+  {
+    "file": "zlzl/plugins/فلاتر.py",
+    "line": 614,
+    "handler": "memes",
+    "pattern": "اطار ?([\\s\\S]*)"
+  },
+  {
+    "file": "zlzl/plugins/فلم.py",
+    "line": 102,
+    "handler": "_",
+    "pattern": "فلم ([\\s\\S]*)"
+  },
+  {
+    "file": "zlzl/plugins/فوتوشوب.py",
+    "line": 65,
+    "handler": "remove_background",
+    "pattern": "(تحلييل|تغيير)(?:\\s|$)([\\s\\S]*)"
+  },
+  {
+    "file": "zlzl/plugins/لوجو.py",
+    "line": 60,
+    "handler": "very",
+    "pattern": "(|s)لوجو(?: |$)([\\s\\S]*)"
+  },
+  {
+    "file": "zlzl/plugins/لوجو.py",
+    "line": 157,
+    "handler": "bad",
+    "pattern": "(|c)lbg(?:\\s|$)([\\s\\S]*)"
+  },
+  {
+    "file": "zlzl/plugins/لوجو.py",
+    "line": 238,
+    "handler": "pussy",
+    "pattern": "lf(|c|s|h|w|sc|sw)(?:\\s|$)([\\s\\S]*)"
+  },
+  {
+    "file": "zlzl/plugins/لوجو.py",
+    "line": 382,
+    "handler": "cat",
+    "pattern": "(g|d|r)lvar(?:\\s|$)([\\s\\S]*)"
+  },
+  {
+    "file": "zlzl/plugins/لوف.py",
+    "line": 13,
+    "handler": "_",
+    "pattern": "لوف ?(.*)"
+  },
+  {
+    "file": "zlzl/plugins/لوقو.py",
+    "line": 53,
+    "handler": "lg1",
+    "pattern": "لوكو ?(.*)"
+  },
+  {
+    "file": "zlzl/plugins/لوقو.py",
+    "line": 128,
+    "handler": "lg1",
+    "pattern": "لوقو ?(.*)"
+  },
+  {
+    "file": "zlzl/plugins/مشاهير.py",
+    "line": 419,
+    "handler": "who",
+    "pattern": "مشهور(?: |$)(.*)"
+  },
+  {
+    "file": "zlzl/plugins/مشاهير.py",
+    "line": 447,
+    "handler": "who",
+    "pattern": "مشهوره(?: |$)(.*)"
+  },
+  {
+    "file": "zlzl/plugins/مشاهير.py",
+    "line": 475,
+    "handler": "who",
+    "pattern": "زاحف(?: |$)(.*)"
+  },
+  {
+    "file": "zlzl/plugins/منع التكرار.py",
+    "line": 18,
+    "handler": "_",
+    "pattern": "<missing-pattern>"
+  },
+  {
+    "file": "zlzl/plugins/منع التكرار.py",
+    "line": 59,
+    "handler": "_",
+    "pattern": "ضع التكرار(?:\\s|$)([\\s\\S]*)"
+  },
+  {
+    "file": "zlzl/plugins/نرد.py",
+    "line": 35,
+    "handler": "gamez",
+    "pattern": "اكس او$"
+  },
+  {
+    "file": "zlzl/plugins/نرد.py",
+    "line": 48,
+    "handler": "_",
+    "pattern": "<dynamic:f'({DART_E_MOJI}|سهم)( ([1-6])|$)'>"
+  },
+  {
+    "file": "zlzl/plugins/نرد.py",
+    "line": 76,
+    "handler": "_",
+    "pattern": "<dynamic:f'({DICE_E_MOJI}|نرد)( ([1-6])|$)'>"
+  },
+  {
+    "file": "zlzl/plugins/نرد.py",
+    "line": 104,
+    "handler": "_",
+    "pattern": "<dynamic:f'({BALL_E_MOJI}|سله)( ([1-5])|$)'>"
+  },
+  {
+    "file": "zlzl/plugins/نرد.py",
+    "line": 132,
+    "handler": "_",
+    "pattern": "<dynamic:f'({FOOT_E_MOJI}|.كرة)( ([1-5])|$)'>"
+  },
+  {
+    "file": "zlzl/plugins/نرد.py",
+    "line": 160,
+    "handler": "_",
+    "pattern": "<dynamic:f'({SLOT_E_MOJI}|حظ)( ([1-64])|$)'>"
+  },
+  {
+    "file": "zlzl/plugins/هيروكو.py",
+    "line": 52,
+    "handler": "variable",
+    "pattern": "(set|get|del) var ([\\s\\S]*)"
+  },
+  {
+    "file": "zlzl/plugins/هيروكو.py",
+    "line": 129,
+    "handler": "dyno_usage",
+    "pattern": "اسستخدامي$"
+  },
+  {
+    "file": "zlzl/plugins/هيروكو.py",
+    "line": 202,
+    "handler": "_",
+    "pattern": "(سجل التنصيب|السجلات)$"
+  },
+  {
+    "file": "zlzl/plugins/وهمي.py",
+    "line": 16,
+    "handler": "_",
+    "pattern": "الطقس(?: |$)(.*)"
+  },
+  {
+    "file": "zlzl/plugins/وهمي.py",
+    "line": 21,
+    "handler": "_",
+    "pattern": "طقس (.*)"
+  },
+  {
+    "file": "zlzl/plugins/وهمي.py",
+    "line": 67,
+    "handler": "_",
+    "pattern": "وهمي كتابه(?: |$)(.*)"
+  },
+  {
+    "file": "zlzl/plugins/وهمي.py",
+    "line": 84,
+    "handler": "_",
+    "pattern": "وهمي صوت(?: |$)(.*)"
+  },
+  {
+    "file": "zlzl/plugins/وهمي.py",
+    "line": 101,
+    "handler": "_",
+    "pattern": "وهمي فيديو(?: |$)(.*)"
+  },
+  {
+    "file": "zlzl/plugins/وهمي.py",
+    "line": 118,
+    "handler": "_",
+    "pattern": "وهمي لعبه(?: |$)(.*)"
+  },
+  {
+    "file": "zlzl/plugins/وهمي.py",
+    "line": 135,
+    "handler": "_",
+    "pattern": "وهمي صوره(?: |$)(.*)"
+  },
+  {
+    "file": "zlzl/plugins/وهمي.py",
+    "line": 152,
+    "handler": "_",
+    "pattern": "وهمي موقع(?: |$)(.*)"
+  },
+  {
+    "file": "zlzl/plugins/وهمي.py",
+    "line": 169,
+    "handler": "_",
+    "pattern": "وهمي جهات(?: |$)(.*)"
+  },
+  {
+    "file": "zlzl/plugins/وهمي.py",
+    "line": 186,
+    "handler": "_",
+    "pattern": "وهمي ملف(?: |$)(.*)"
+  },
+  {
+    "file": "zlzl/plugins/وهمي.py",
+    "line": 203,
+    "handler": "_",
+    "pattern": "وهمي مرئي(?: |$)(.*)"
+  },
+  {
+    "file": "zlzl/plugins/وهمي.py",
+    "line": 220,
+    "handler": "_",
+    "pattern": "ايقاف الوهمي(?: |$)(.*)"
+  }
+]

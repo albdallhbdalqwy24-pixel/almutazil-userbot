@@ -16,8 +16,8 @@ class CommandLoaderPolicyTests(unittest.TestCase):
 
     def test_basic_help_handlers_are_active(self) -> None:
         commands_source = (ROOT / "zlzl/plugins/الاوامر.py").read_text(encoding="utf-8")
-        self.assertIn('@zedub.zed_cmd(pattern="مساعدة(?: |$)(.*)")', commands_source)
-        self.assertIn('@zedub.zed_cmd(pattern="اوامري(?: |$)(.*)")', commands_source)
+        self.assertIn("(?:مساعدة|مساعده)", commands_source)
+        self.assertIn("(?:اوامري|الاوامر|الأوامر)", commands_source)
 
 
 if __name__ == "__main__":

@@ -69,6 +69,22 @@ async def command_index(event):
         "`.ايدي` — معلومات المعرّف\n"
         "`.الاعدادات` — إعدادات الدردشة عند توفر الصلاحية",
     )
+
+
+@zedub.zed_cmd(pattern="حالة (?:الاوامر|الأوامر)(?: |$)(.*)")
+async def command_load_status(event):
+    """يعرض ملخصاً حقيقياً لتحميل إضافات الأوامر في الإقلاع الحالي."""
+    from ..utils.startup import PLUGIN_LOAD_SUMMARY
+
+    if not PLUGIN_LOAD_SUMMARY:
+        return await edit_or_reply(event, "لم يكتمل جمع حالة تحميل الأوامر بعد.")
+    lines = ["**حالة تحميل الأوامر**"]
+    for folder, status in sorted(PLUGIN_LOAD_SUMMARY.items()):
+        failed = ", ".join(status["failed"]) or "لا يوجد"
+        lines.append(
+            f"`{folder}`: محمّل {status['loaded']} | فشل {failed}"
+        )
+    await edit_or_reply(event, "\n".join(lines))
 ppath = os.path.join(os.getcwd(), "temp", "githubuser.jpg")
 GIT_TEMP_DIR = "./temp/"
 cmdhd = Config.COMMAND_HAND_LER

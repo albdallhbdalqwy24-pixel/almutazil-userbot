@@ -46,6 +46,10 @@ ENV = bool(os.environ.get("ENV", False))
 LOGS = logging.getLogger("zlzl")
 cmdhr = Config.COMMAND_HAND_LER
 VPS_NOLOAD = []
+PLUGIN_LOAD_SUMMARY = {}
+NON_INSTALLABLE_PLUGIN_MODULES = {
+    "zedthon": "ملفات أوامر الثيمات الأصلية غير مرفقة في هذا السورس المنقول.",
+}
 Zel_Dev = (1895219306, 925972505)
 Zed_Dev = (1895219306, 925972505, 5176749470, 2095357462, 6269975462, 6227985448, 6470835326, 5616315677)
 Zed_Vip = Zed_Dev
@@ -364,6 +368,7 @@ async def load_plugins(folder, extfolder=None):
     files.sort()
     success = 0
     failure = []
+    skipped = []
     for name in files:
         with open(name) as f:
             path1 = Path(f.name)
@@ -386,6 +391,14 @@ async def load_plugins(folder, extfolder=None):
                             success += 1
                             break
                         except ModuleNotFoundError as e:
+                            if e.name in NON_INSTALLABLE_PLUGIN_MODULES:
+                                LOGS.warning(
+                                    f"تعذر تحميل {shortname}: "
+                                    f"{NON_INSTALLABLE_PLUGIN_MODULES[e.name]}"
+                                )
+                                if shortname not in failure:
+                                    failure.append(shortname)
+                                break
                             install_pip(e.name)
                             check += 1
                             if shortname not in failure:
@@ -393,6 +406,7 @@ async def load_plugins(folder, extfolder=None):
                             if check > 5:
                                 break
                 else:
+                    skipped.append(shortname)
                     LOGS.info(f"تم تجاوز الإضافة {shortname} حسب إعدادات التشغيل.")
             except Exception as e:
                 if shortname not in failure:
@@ -400,6 +414,18 @@ async def load_plugins(folder, extfolder=None):
                 LOGS.info(
                     f"لا يمكنني تحميل {shortname} بسبب الخطأ {e}\nمجلد القاعده {plugin_path}"
                 )
+    PLUGIN_LOAD_SUMMARY[folder] = {
+        "loaded": success,
+        "failed": sorted(failure),
+        "skipped": sorted(skipped),
+    }
+    if failure:
+        LOGS.warning(
+            f"ملخص تحميل {folder}: تم تحميل {success}؛ "
+            f"تعذر تحميل: {', '.join(failure)}."
+        )
+    else:
+        LOGS.info(f"ملخص تحميل {folder}: تم تحميل {success} إضافة بنجاح.")
     if extfolder:
         if not failure:
             failure.append("None")

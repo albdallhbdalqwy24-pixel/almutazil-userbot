@@ -11,6 +11,12 @@ PIP_COMPATIBILITY_MAP = {
     "imdb": "IMDbPY",
     "search_engine_parser": "search-engine-parser",
     "fontTools": "fonttools",
+    "barcode": "python-barcode",
+    "gtts": "gTTS",
+    "pySmartDL": "pySmartDL",
+    "pymediainfo": "pymediainfo",
+    "youtube_search": "youtube-search",
+    "speedtest": "speedtest-cli",
 }
 
 

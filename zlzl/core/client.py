@@ -153,6 +153,16 @@ class ZedUserBotClient(TelegramClient):
                 except BaseException as e:
                     LOGS.exception(e)
                     if not disable_errors:
+                        try:
+                            await edit_delete(
+                                check,
+                                "**تعذر تنفيذ هذا الأمر حالياً.**\n"
+                                "قد يحتاج صلاحية أو رداً على رسالة أو خدمة خارجية؛ "
+                                "راجع سجل Render لمعرفة السبب.",
+                                12,
+                            )
+                        except BaseException:
+                            pass
                         if check.sender_id not in ZDEV:
                             return
                         if Config.PRIVATE_GROUP_BOT_API_ID == 0:
