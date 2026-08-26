@@ -51,6 +51,8 @@ class RenderSetupTests(unittest.TestCase):
         self.assertIn("fonttools", requirements)
         self.assertIn("lyricsgenius", requirements)
         self.assertIn("pytz", requirements)
+        self.assertIn("GitPython", requirements)
+        self.assertIn("search-engine-parser", requirements)
 
 
 if __name__ == "__main__":

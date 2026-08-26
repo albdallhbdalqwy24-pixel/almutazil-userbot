@@ -6,6 +6,11 @@ PIP_COMPATIBILITY_MAP = {
     # Python removed cgi in 3.13. The maintained compatibility package
     # restores the original import name on modern Termux Python releases.
     "cgi": "legacy-cgi",
+    # The import name is ``git``, but PyPI distributes it as GitPython.
+    "git": "GitPython",
+    "imdb": "IMDbPY",
+    "search_engine_parser": "search-engine-parser",
+    "fontTools": "fonttools",
 }
 
 
