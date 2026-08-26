@@ -30,3 +30,4 @@
 - [x] إزالة استيراد _zedtools و_format الدائري من تهيئة helpers على Render.
 - [x] إصلاح تصدير _zedtools أثناء تهيئة helpers على Render.
 - [x] إضافة اعتماد lyricsgenius الناقص لإضافة الموسيقى على Render.
+- [x] إضافة اعتماد pytz الناقص لمسار startup على Render.

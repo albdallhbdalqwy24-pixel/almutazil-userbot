@@ -11,6 +11,7 @@ requests
 aiohttp
 Pillow
 fonttools
+pytz
 lxml
 lxml_html_clean
 legacy-cgi

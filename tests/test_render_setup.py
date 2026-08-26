@@ -49,6 +49,7 @@ class RenderSetupTests(unittest.TestCase):
         self.assertIn("youtube-search-python", requirements)
         self.assertIn("fonttools", requirements)
         self.assertIn("lyricsgenius", requirements)
+        self.assertIn("pytz", requirements)
 
 
 if __name__ == "__main__":
