@@ -1,6 +1,7 @@
 Flask>=3.0
 Telethon
 heroku3
+lyricsgenius
 yt-dlp
 youtube-search-python
 SQLAlchemy

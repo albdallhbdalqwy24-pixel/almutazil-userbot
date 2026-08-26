@@ -48,6 +48,7 @@ class RenderSetupTests(unittest.TestCase):
         self.assertIn("sqlalchemy-json", requirements)
         self.assertIn("youtube-search-python", requirements)
         self.assertIn("fonttools", requirements)
+        self.assertIn("lyricsgenius", requirements)
 
 
 if __name__ == "__main__":
