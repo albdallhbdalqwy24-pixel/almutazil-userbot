@@ -19,8 +19,9 @@ class PluginLoadSummaryTests(unittest.TestCase):
         source = (Path(__file__).resolve().parents[1] / "zlzl/plugins/ثيمات_بديل.py").read_text(
             encoding="utf-8"
         )
-        self.assertIn("(?:ث|ن)(?:[1-9]|1[0-2])$", source)
-        self.assertIn("ملفات الثيمات الأصلية غير موجودة", source)
+        self.assertIn('"ث1": ("theme-photo-1.jpg"', source)
+        self.assertIn('"ث2": ("theme-video-2.mp4"', source)
+        self.assertIn("هذا الثيم لم تُضف له صورة أو فيديو بعد", source)
 
     def test_command_load_status_is_registered(self) -> None:
         source = (Path(__file__).resolve().parents[1] / "zlzl/plugins/الاوامر.py").read_text(

@@ -2791,9 +2791,9 @@
   },
   {
     "file": "zlzl/plugins/ثيمات_بديل.py",
-    "line": 8,
-    "handler": "unavailable_theme_command",
-    "pattern": "(?:ث|ن)(?:[1-9]|1[0-2])$"
+    "line": 16,
+    "handler": "local_theme_command",
+    "pattern": "((?:ث|ن)(?:[1-9]|1[0-2]))$"
   },
   {
     "file": "zlzl/plugins/جوجل.py",
